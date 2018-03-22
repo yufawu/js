@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        h1,p{
+            text-align: center;
+        }
+        .content{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            width: 30%;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        
+       
+        .on{
+            background:yellowgreen;
+            color:#fff;
+        }
+        .div{
+            width:20rem;
+            height:10rem;
+            background-color:grey;
+            margin:0 auto;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>选项卡切换</h1>
+    <p><a href="">返回主菜单</a></p>
+    <ul class="tab">
+        <li class="on"  value="选项一">选项一</li>
+        <li class="off" value="选项二">选项二</li>
+        <li calss="off" value="选项三">选项三</li>
+    </ul>
+    <div class="show">内容1</div>
+    </div class="hide">内容2</div>
+    <div class="hide">内容3</div>
+   <script>
+       window.onload=function(){
+           var oli=document.getElementsByTagName("li");
+           var adiv=document.getElementsByTagName("div");
+           for(var i=0; i<oli.length; i++){
+               oli[i].index=i;
+               oli[i].onclick=function(){
+                for(var j = 0; j< oli.length; j++) {
+                 oli[j].className="off";
+                 adiv[j].className="hide";
+               }
+               this.className="on";
+               adiv[this.index].className="show";
+           };
+       }
+    }
+       
+   </script>
+</body>
+</html>

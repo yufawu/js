@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单</title>
+    <style type="text/css">
+            .one li{ width:100px; height:30px; 
+                line-height:30px; background:red;
+                  float:left; text-align:center; 
+                  margin-left:10px; cursor:pointer; 
+                  _display:inline; position:relative;}
+            li ul{ position:absolute; left:-50px; top:30px;
+               display:none;} 
+            ul{
+                list-style: none;
+            }
+    </style>
+</head>
+<body>
+        <ul class="one">
+                <li id="li01">
+                    <span>一级菜单</span>
+                    <ul id="ul01">
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+                <li id="li02">
+                    <span>一级菜单</span>
+                    <ul id="ul02">
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+                <li id="li03">
+                    <span>一级菜单</span>
+                    <ul id="ul03">
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+            </ul>
+            <script> function fn(canshu1,canshu2){
+                    var li01 = document.getElementById(canshu1);
+                    var ul01 = document.getElementById(canshu2);
+                    
+                    li01.onmouseover = function(){
+                        ul01.style.display = "block"    
+                    }
+                    li01.onmouseout = function(){
+                        ul01.style.display = "none"    
+                    }
+                }
+                fn("li01","ul01")    
+                fn("li02","ul02")    
+                fn("li03","ul03")
+            </script>
+</body>
+</html>
