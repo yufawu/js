@@ -21,3 +21,9 @@ var result = getFields(objArray, "foo"); // returns [ 1, 3, 5 ]
 ``` js
 var result = objArray.map(a => a.foo); //return [1,3,5]
 ```
+对应es5的写法 Array.prototype.map
+``` js
+var result = ObjArray.map(function (a) {
+    retrun a.foo
+})
+```
