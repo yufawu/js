@@ -77,3 +77,54 @@ function sortKeyReverse(array,key) { //从高到低
   })
 }
 ```
+
+### 5.fkey加密，传入要加密的参数，然后添加fkey作为一个新的对象返回
+传入的参数可不排序，该方法中会先进行排序，然后追加一个fkey值后返回，
+```js
+function getFkey (obj){
+  let currentdate = getNowFormatDate();//获取当前时间
+  let obj_sort = objSort(obj);//进行排序
+  let json_obj = JSON.stringify(obj_sort);
+  let fkey_obj = md5.hexMD5(json_obj+currentdate+"自定义值");//生成fkey
+  obj.fkey = fkey_obj; //将生成的fkey值添加到之前的obj中，作为请求参数
+  return obj;
+}
+```
+
+### 6.判断两个对象的值是否相等
+``` js
+function isEqual (a, b) {
+  const classNameA = toString.call(a)
+  const classNameB = toString.call(b)
+  // 如果数据类型不相等，则返回false
+  if (classNameA !== classNameB) {
+    return false
+  } else {
+    // 如果数据类型相等，再根据不同数据类型分别判断
+    if (classNameA === '[object Object]') {
+      for (let key in a) {
+        if (!isEqual(a[key], b[key])) return false
+      }
+      for (let key in b) {
+        if (!isEqual(a[key], b[key])) return false
+      }
+      return true
+    } else if (classNameA === '[object Array]') {
+      if (a.length !== b.length) {
+        return false
+      } else {
+        for (let i = 0, len = a.length; i < len; i++) {
+          if (!isEqual(a[i], b[i])) return false
+        }
+        return true
+      }
+    } else if (classNameA === '[object Function]') {
+      return a.toString() === b.toString()
+    } else {
+      return Object.is(a, b)
+    }
+  }
+}
+```
+使用 传入a,b两个值，如果相等则返回true,不等则返回false
+场景：可用于判断每次请求参数的值是否相等，如果相等就不请求接口，这样做可以避免重复点击导致的接口请求
