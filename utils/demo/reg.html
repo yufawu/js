@@ -1,0 +1,119 @@
+<!-- 正则表达式 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        #app{
+            width:1200px;
+            margin:0 auto;
+            text-align: center;
+        }
+        .box{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .box-title{
+            margin-right:20px;
+        }
+        .title{
+            margin: 30px 0;
+            font-weight:bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="title">已有功能</div>
+    <div class="box" v-for="item in list">
+            <div class="box-title">{{item.title}}</div>
+    </div>
+    <div class="title">在线测试网站</div>
+    <div class="item" v-for="item in website">
+        <a :href=item.url target="_blank">
+            <div class="item-title">{{item.name}}</div>
+        </a>
+    </div>
+
+</div>
+<script src="../public/vue-2.6.10.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            list:[
+                {
+                    title:'1.匹配手机号',
+                    url:'./reg.html'
+                },
+                {
+                    title:'2.用户名正则，4到16位（字母，数字，下划线，减号）',
+                    url:'./reg.html'
+                },
+                {
+                    title:'3.密码强度正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'4.Email正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'5.身份证号（18位）正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'6.URL正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'7.QQ号正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'8.微信号正则',
+                    url:'./reg.html'
+                },
+                {
+                    title:'9.检验中文',
+                    url:'./reg.html'
+                },
+                {
+                    title:'10.判断IE的版本',
+                    url:'./reg.html'
+                },
+                {
+                    title:'11.提取URL链接',
+                    url:'./reg.html'
+                },
+                {
+                    title:'12.检查URL前缀',
+                    url:'./reg.html'
+                },
+                {
+                    title:'15.去除字符串空格，前，后，所有空格',
+                    url:'./reg.html'
+                },
+            ],
+            website:[
+                {
+                    name:'菜鸟工具(推荐)',
+                    url:'https://c.runoob.com/front-end/854'
+                },
+                {
+                    name:'站长工具（广告较多）',
+                    url:'https://tool.chinaz.com/regex'
+                },
+                {
+                    name:'在线工具（广告较少）',
+                    url:'https://tool.chinaz.com/regex'
+                },
+            ]
+        }
+    })
+</script>
+</body>
+</html>
