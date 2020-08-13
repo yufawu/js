@@ -1,16 +1,7 @@
 @charset "utf-8";
+
 /*
  
- * 17素材vip建站专区模块代码
- * 详尽信息请看官网：http://www.17sucai.com/pins/vip
- *
- * Copyright , 温州易站网络科技有限公司版权所有
- * 图片不能商用，代码可商用。
- 
- * 请尊重原创，未经允许请勿转载。
- * 在保留版权的前提下可应用于个人或商业用途
- 
-*/
 
 *{margin:0;padding:0}
 body{font-family:"微软雅黑";font-size:12px;height:100%;line-height:22px;width:100%;background:#eeeeee;}
@@ -38,29 +29,129 @@ ul{list-style:none}
 .nav ul li .mad6 .p1{text-align:right}
 .a_txt{display:none}
 /*小于1600大于1200稍微调整下字体*/
+
 @media screen and (max-width: 1600px) and (min-width:1200px) {
-.nav ul li .a1{font-size:14px}
-.nav ul li .div1 .p1 a{font-size:12px}
-.foot_top ul{margin-left:60px}
-.nav ul li .div1 .p1{width:58.1%}
+    .nav ul li .a1 {
+        font-size: 14px
+    }
+    .nav ul li .div1 .p1 a {
+        font-size: 12px
+    }
+    .foot_top ul {
+        margin-left: 60px
+    }
+    .nav ul li .div1 .p1 {
+        width: 58.1%
+    }
 }
+
+
 /*移动端导航*/
-@media screen and (max-width: 1024px) and (min-width: 0px){
-.head{display:none}
-.moblie_head{display:block;height:44px;background:#fff;position:fixed;top:0px;left:0px;width:100%;z-index:9999;border-bottom:1px solid #ddd}
-.moblie_head .lf{padding-top:10px;padding-left:5%}
-.moblie_head .lf img{height:24px}
-.moblie_head .rg{padding-right:5%;padding-top:14px}
-.moblie_head .rg a img{height:16px;vertical-align:top}
-.a_txt{display:block;position:fixed;top:0px;left:0px;width:0px;height:0px;overflow:hidden;z-index:10000}
-.a_txt .div1{position:absolute;width:100%;height:100%;background:#0b0d19;filter:alpha(opacity=0);opacity:0;left:0px;top:0px;z-index:1}
-.a_txt .div2{position:absolute;width:20%;left:0px;top:5%;z-index:100;text-align:center;filter:alpha(opacity=0);opacity:0}
-.a_txt .div3{position:absolute;width:80%;right:0px;top:0px;background:#0b0d19;height:100%;z-index:100;right:-80%}
-.a_txt .div3 ul{padding-left:5%;padding-right:5%}
-.a_txt .div3 ul li{border-bottom:1px solid #232530}
-.a_txt .div3 ul li a{display:block;height:45px;color:#fff;line-height:45px;padding-left:5%;font-size:16px}
-.a_txt .div3 ul li .a_js2{background:url(../images/plus.png) 95% center no-repeat;-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
-.a_txt .div3 ul li .a_js2_on{background:url(../images/reduce.jpg) 95% center no-repeat;-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
-.a_txt .div3 ul li .a_txt2{display:none}
-.a_txt .div3 ul li .a_txt2 a{height:40px;line-height:40px;font-size:14px}
+
+@media screen and (max-width: 1024px) and (min-width: 0px) {
+    .head {
+        display: none
+    }
+    .moblie_head {
+        display: block;
+        height: 44px;
+        background: #fff;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 9999;
+        border-bottom: 1px solid #ddd
+    }
+    .moblie_head .lf {
+        padding-top: 10px;
+        padding-left: 5%
+    }
+    .moblie_head .lf img {
+        height: 24px
+    }
+    .moblie_head .rg {
+        padding-right: 5%;
+        padding-top: 14px
+    }
+    .moblie_head .rg a img {
+        height: 16px;
+        vertical-align: top
+    }
+    .a_txt {
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        z-index: 10000
+    }
+    .a_txt .div1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #0b0d19;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        left: 0px;
+        top: 0px;
+        z-index: 1
+    }
+    .a_txt .div2 {
+        position: absolute;
+        width: 20%;
+        left: 0px;
+        top: 5%;
+        z-index: 100;
+        text-align: center;
+        filter: alpha(opacity=0);
+        opacity: 0
+    }
+    .a_txt .div3 {
+        position: absolute;
+        width: 80%;
+        right: 0px;
+        top: 0px;
+        background: #0b0d19;
+        height: 100%;
+        z-index: 100;
+        right: -80%
+    }
+    .a_txt .div3 ul {
+        padding-left: 5%;
+        padding-right: 5%
+    }
+    .a_txt .div3 ul li {
+        border-bottom: 1px solid #232530
+    }
+    .a_txt .div3 ul li a {
+        display: block;
+        height: 45px;
+        color: #fff;
+        line-height: 45px;
+        padding-left: 5%;
+        font-size: 16px
+    }
+    .a_txt .div3 ul li .a_js2 {
+        background: url(../images/plus.png) 95% center no-repeat;
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        transition: all 0s
+    }
+    .a_txt .div3 ul li .a_js2_on {
+        background: url(../images/reduce.jpg) 95% center no-repeat;
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        transition: all 0s
+    }
+    .a_txt .div3 ul li .a_txt2 {
+        display: none
+    }
+    .a_txt .div3 ul li .a_txt2 a {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px
+    }
 }
