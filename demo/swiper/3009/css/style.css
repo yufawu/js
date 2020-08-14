@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{
+	max-width:640px;}
+img{
+	display:block;}
+*{  
+    margin:0;
+	padding:0;}
+li{
+	list-style:none;}		
+#top{
+	width:100%;
+	}	
+#comment-list{
+	margin:1em 0;}	
+#comment-list li{
+	display:flex;
+	margin-top:1.3em;}	
+.face{
+	width:12%;
+	margin:0 2% 0 4%;}	
+.face img{
+	width:100%;}	
+.guest{
+	width:82%;
+	border-bottom:1px solid #dbdbdb;}	
+.name{
+	display:inline-block;
+	font-size:1.2em;
+	font-weight:500;}	
+.level{
+	margin-left:0.5em;}	
+.level img{ display:inline;
+width:0.8em;}	
+.date{
+	float:right;
+	margin-right:3%;
+	color:#999;
+	}	
+.star{
+	margin-top:0.7em;}
+.star img{
+	width:23%;}	
+.detail{
+	margin-top:0.3em;}	
+.thumb{
+	margin:1em 0;
+}	
+.thumb img{
+	width:23%;
+	margin-right:0.5%;
+	display:inline-block;}	
+#origin-img{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	}
+#origin-img .swiper-slide img{
+	width:100%;
+	vertical-align:middle;
+	}	
+.swiper-pagination{
+	top:1em;
+	bottom:auto;
+	color:#fff;}	
+.upload{
+	position:absolute;
+	bottom:0;
+	line-height:3em;
+	background:rgba(0,0,0,.5);
+	z-index:5;
+	color:#fff;
+	text-indent:1em;
+	width:100%;}	
