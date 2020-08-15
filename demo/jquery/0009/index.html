@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery之美-指定内容高亮</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div style="height: 100px;"></div>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">jQuery之美-指定内容高亮</div>
+                <div class="panel-body">
+                    <div>
+                        <p class="text-primary">测试文本：</p>
+                        <div id="testHtml">
+                            <ul>
+                                <li>姓名：浪哥</li>
+                                <li>工作岗位：WEB前端工程师</li>
+                                <li>工作经验：6年</li>
+                                <li>在校专业：软件工程(信息工程系)</li>
+                                <li>知识技能：HTML5，CSS3，js，es6，Node.js，jQuery，Vue.js，小程序,Dcloud，APICloud，能手写响应式布局、弹性布局框架</li>
+                                <li>在校所学科目：C，JAVA，C#，ASP.NET，MYSQL，SQL server，数据结构，软件测试，软件工程，软件架构，计算机操作系统</li>
+                                <li>掌握框架：Bootstrap，layui，Element UI</li>
+                                <li>自我评价：具有良好的团队意识</li>
+                                <li>联系QQ：5564647856</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-primary">体验一下：</p>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control" id="replaceVal" placeholder="请输入需要高亮的内容以 “|” 隔开" value="前端|小程序|系统|软件">
+                            </div>
+                            <div class="col-xs-3">
+                                <button type="button" class="btn btn-primary btn-block" id="replace">高亮一下</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">&copy; 2019</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/highlight.js"></script>
+<script type="text/javascript">
+    /* 保存初始测试文本内容 */
+    var oldStr=$("#testHtml").html();
+    /* 测试按钮点击 */
+    $("#replace").click(function () {
+        var val=$("#replaceVal").val();
+        if(!val){
+            alert('请输入需要高亮的内容');
+            return;
+        }
+        /* 插件调用，返回 添加高亮效果 的字符串 */
+        var newStr=$.highlight(oldStr,{
+            color:'#ea0000',// 高度颜色，默认:#f00
+            weight:true,    // 是否加粗，默认:不加粗
+            keys:val        //需要高亮的值，必须的
+        });
+        $("#testHtml").html(newStr);
+    });
+    /* 执行测试按钮点击事件 */
+    $("#replace").click();
+</script>
+
+</body>
+</html>
