@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>trailer_lc.mp4 - AoiPlyaer</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ap-style.css">
+	<script src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<div id="ap-player-box">
+		<div id="ap-player-bar">
+			<div id="ap-loading-box">
+				<img src="image/loading.png">
+				<div>视频及弹幕加载中~请稍后</div>
+			</div>
+			<div id="ap-player-hide">
+				<img src="image/play.png" id="ap-player-icon" ondragstart="return false">
+			</div>
+			<div id="ap-chatbox">
+				
+			</div>
+			<div class="ap-title">trailer_lc.mp4 <div id="ap-danmu-num">该视频已有 <span>0</span> 条吐槽!</div></div>
+			<video id="ap-player">
+				
+			</video>
+			<div id="ap-console">
+				<div id="ap-console-play"><i class="icon-play"></i></div>
+				<div id="ap-console-time">00:00 / 00:00</div>
+				<div id="ap-console-jdbar">
+					<div id="ap-console-jdbar-btn"></div>
+					<div id="ap-console-jdbar-beacon"></div>
+					<div id="ap-console-jdbar-okbar"></div>
+				</div>
+				<div id="ap-console-volume"><i class="icon-volume-down"></i>
+					<div id="ap-console-volume-box">
+						<div id="ap-console-volume-text">30</div>
+						<div id="ap-console-volume-bar">
+							<div id="ap-console-volume-btn"></div>
+						</div>
+					</div>
+				</div>
+				<div id="ap-console-clarity">
+					<div id="ap-console-clarity-txt">高清</div>
+					<ul>
+						<li>高清</li>
+						<li>流畅</li>
+					</ul>
+				</div>
+				<div id="ap-console-full"><i class="icon-fullscreen"></i></div>
+				<img src="image/playerlogo.png">
+			</div>
+		</div>
+		<div class="ap-other-bar">
+			<ul class="ap-right-tab">
+				<li class="ap-tab-se">推荐视频</li>
+				<li>弹幕设置</li>
+			</ul>
+		</div>
+		<div id="ap-mouse-rightkey">
+			<ul>
+				<li>播放器版本 Aoi'Player V1.0.1</li>
+				<a href="updata-log.html"><li>更新日志</li></a>
+				<a href=""><li>重置播放器</li></a>
+				<a href=""><li>BUG提交</li></a>
+				<a href=""><li>复制调试信息</li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="ap-danmu-bar">
+		<div id="ap-danmu-switch-box">
+			<div id="ap-danmu-switch">弹</div>
+		</div>
+		<div class="ap-danmu-input-box">
+			<input type="text" name="" placeholder="在这里发射弹幕喔！" id="ap-danmu-input">
+			<input type="submit" name="" value="发送" id="ap-danmu-submit">
+		</div>
+		<div id="ap-danmu-color-box" ap-color="#FFFFFF">
+			<ul id="ap-danmu-color-cube">
+				<li ap-color="#000000"></li>
+				<li ap-color="#003300"></li><li ap-color="#003333"></li><li ap-color="#003366"></li><li ap-color="#003399"></li><li ap-color="#0033CC"></li><li ap-color="#0033FF"></li>
+				<li ap-color="#330000"></li><li ap-color="#333300"></li><li ap-color="#336600"></li><li ap-color="#339900"></li><li ap-color="#33CC00"></li><li ap-color="#33FF00"></li>
+				<li ap-color="#660000"></li><li ap-color="#663300"></li><li ap-color="#666600"></li><li ap-color="#669900"></li><li ap-color="#66CC00"></li><li ap-color="#66FF00"></li>
+				<li ap-color="#333333"></li>
+				<li ap-color="#000033"></li><li ap-color="#003333"></li><li ap-color="#006633"></li><li ap-color="#009933"></li><li ap-color="#00CC33"></li><li ap-color="#00FF33"></li>
+				<li ap-color="#330033"></li><li ap-color="#333333"></li><li ap-color="#336633"></li><li ap-color="#339933"></li><li ap-color="#33CC33"></li><li ap-color="#33FF33"></li>
+				<li ap-color="#660033"></li><li ap-color="#663333"></li><li ap-color="#666633"></li><li ap-color="#669933"></li><li ap-color="#66CC33"></li><li ap-color="#66FF33"></li>
+				<li ap-color="#666666"></li>
+				<li ap-color="#000066"></li><li ap-color="#003366"></li><li ap-color="#006666"></li><li ap-color="#009966"></li><li ap-color="#00CC66"></li><li ap-color="#00FF66"></li>
+				<li ap-color="#330066"></li><li ap-color="#333366"></li><li ap-color="#336666"></li><li ap-color="#339966"></li><li ap-color="#33CC66"></li><li ap-color="#33FF66"></li>
+				<li ap-color="#660066"></li><li ap-color="#663366"></li><li ap-color="#666666"></li><li ap-color="#669966"></li><li ap-color="#66CC66"></li><li ap-color="#66FF66"></li>
+				<li ap-color="#999999"></li>
+				<li ap-color="#000099"></li><li ap-color="#003399"></li><li ap-color="#006699"></li><li ap-color="#009999"></li><li ap-color="#00CC99"></li><li ap-color="#00FF99"></li>
+				<li ap-color="#330099"></li><li ap-color="#333399"></li><li ap-color="#336699"></li><li ap-color="#339999"></li><li ap-color="#33CC99"></li><li ap-color="#33FF99"></li>
+				<li ap-color="#660099"></li><li ap-color="#663399"></li><li ap-color="#666699"></li><li ap-color="#669999"></li><li ap-color="#66CC99"></li><li ap-color="#66FF99"></li>
+				<li ap-color="#CCCCCC"></li>
+				<li ap-color="#0000CC"></li><li ap-color="#0033CC"></li><li ap-color="#0066CC"></li><li ap-color="#0099CC"></li><li ap-color="#00CCCC"></li><li ap-color="#00FFCC"></li>
+				<li ap-color="#3300CC"></li><li ap-color="#3333CC"></li><li ap-color="#3366CC"></li><li ap-color="#3399CC"></li><li ap-color="#33CCCC"></li><li ap-color="#33FFCC"></li>
+				<li ap-color="#6600CC"></li><li ap-color="#6633CC"></li><li ap-color="#6666CC"></li><li ap-color="#6699CC"></li><li ap-color="#66CCCC"></li><li ap-color="#66FFCC"></li>
+				<li ap-color="#FFFFFF"></li>
+				<li ap-color="#0000FF"></li><li ap-color="#0033FF"></li><li ap-color="#0066FF"></li><li ap-color="#0099FF"></li><li ap-color="#00CCFF"></li><li ap-color="#00FFFF"></li>
+				<li ap-color="#3300FF"></li><li ap-color="#3333FF"></li><li ap-color="#3366FF"></li><li ap-color="#3399FF"></li><li ap-color="#33CCFF"></li><li ap-color="#33FFFF"></li>
+				<li ap-color="#6600FF"></li><li ap-color="#6633FF"></li><li ap-color="#6666FF"></li><li ap-color="#6699FF"></li><li ap-color="#66CCFF"></li><li ap-color="#66FFFF"></li>
+				<li ap-color="#FF0000"></li>
+				<li ap-color="#990000"></li><li ap-color="#993300"></li><li ap-color="#996600"></li><li ap-color="#999900"></li><li ap-color="#99CC00"></li><li ap-color="#99FF00"></li>
+				<li ap-color="#CC0000"></li><li ap-color="#CC3300"></li><li ap-color="#CC6600"></li><li ap-color="#CC9900"></li><li ap-color="#CCCC00"></li><li ap-color="#CCFF00"></li>
+				<li ap-color="#FF0000"></li><li ap-color="#FF3300"></li><li ap-color="#FF6600"></li><li ap-color="#FF9900"></li><li ap-color="#FFCC00"></li><li ap-color="#FFFF00"></li>
+				<li ap-color="#00FF00"></li>
+				<li ap-color="#990033"></li><li ap-color="#993333"></li><li ap-color="#996633"></li><li ap-color="#999933"></li><li ap-color="#99CC33"></li><li ap-color="#99FF33"></li>
+				<li ap-color="#CC0033"></li><li ap-color="#CC3333"></li><li ap-color="#CC6633"></li><li ap-color="#CC9933"></li><li ap-color="#CCCC33"></li><li ap-color="#CCFF33"></li>
+				<li ap-color="#FF0033"></li><li ap-color="#FF3333"></li><li ap-color="#FF6633"></li><li ap-color="#FF9933"></li><li ap-color="#FFCC33"></li><li ap-color="#FFFF33"></li>
+				<li ap-color="#0000FF"></li>
+				<li ap-color="#990066"></li><li ap-color="#993366"></li><li ap-color="#996666"></li><li ap-color="#999966"></li><li ap-color="#99CC66"></li><li ap-color="#99FF66"></li>
+				<li ap-color="#CC0066"></li><li ap-color="#CC3366"></li><li ap-color="#CC6666"></li><li ap-color="#CC9966"></li><li ap-color="#CCCC66"></li><li ap-color="#CCFF66"></li>
+				<li ap-color="#FF0066"></li><li ap-color="#FF3366"></li><li ap-color="#FF6666"></li><li ap-color="#FF9966"></li><li ap-color="#FFCC66"></li><li ap-color="#FFFF66"></li>
+				<li ap-color="#FFFF00"></li>
+				<li ap-color="#990099"></li><li ap-color="#993399"></li><li ap-color="#996699"></li><li ap-color="#999999"></li><li ap-color="#99CC99"></li><li ap-color="#99FF99"></li>
+				<li ap-color="#CC0099"></li><li ap-color="#CC3399"></li><li ap-color="#CC6699"></li><li ap-color="#CC9999"></li><li ap-color="#CCCC99"></li><li ap-color="#CCFF99"></li>
+				<li ap-color="#FF0099"></li><li ap-color="#FF3399"></li><li ap-color="#FF6699"></li><li ap-color="#FF9999"></li><li ap-color="#FFCC99"></li><li ap-color="#FFFF99"></li>
+				<li ap-color="#00FFFF"></li>
+				<li ap-color="#9900CC"></li><li ap-color="#9933CC"></li><li ap-color="#9966CC"></li><li ap-color="#9999CC"></li><li ap-color="#99CCCC"></li><li ap-color="#99FFCC"></li>
+				<li ap-color="#CC00CC"></li><li ap-color="#CC33CC"></li><li ap-color="#CC66CC"></li><li ap-color="#CC99CC"></li><li ap-color="#CCCCCC"></li><li ap-color="#CCFFCC"></li>
+				<li ap-color="#FF00CC"></li><li ap-color="#FF33CC"></li><li ap-color="#FF66CC"></li><li ap-color="#FF99CC"></li><li ap-color="#FFCCCC"></li><li ap-color="#FFFFCC"></li>
+				<li ap-color="#FF00FF"></li>
+				<li ap-color="#9900FF"></li><li ap-color="#9933FF"></li><li ap-color="#9966FF"></li><li ap-color="#9999FF"></li><li ap-color="#99CCFF"></li><li ap-color="#99FFFF"></li>
+				<li ap-color="#CC00FF"></li><li ap-color="#CC33FF"></li><li ap-color="#CC66FF"></li><li ap-color="#CC99FF"></li><li ap-color="#CCCCFF"></li><li ap-color="#CCFFFF"></li>
+				<li ap-color="#FF00FF"></li><li ap-color="#FF33FF"></li><li ap-color="#FF66FF"></li><li ap-color="#FF99FF"></li><li ap-color="#FFCCFF"></li><li ap-color="#FFFFFF"></li>
+				<div id="ap-danmu-color-show">天气又凉了，填件衣</div>
+				<input type="text" name="" id="ap-danmu-color-text" value="#FFFFFF">
+			</ul>
+		</div>
+		<div id="ap-danmu-cog-box">
+			<i class="icon-cog"></i>
+			<div id="ap-danmu-cog-cube">
+				<div class="ap-danmu-cog-title">弹幕类型</div>
+				<ul class="ap-danmu-cog-type">
+					<li><label><input type="radio" name="danmuType" checked="checked" value="1">滚动弹幕</label></li>
+					<li><label><input type="radio" name="danmuType" value="2">顶部弹幕</label></li>
+					<li><label><input type="radio" name="danmuType" disabled="disabled" value="3">炫彩弹幕</label></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="jquery-aoiplayer.js"></script>
+<script type="text/javascript">
+	apcore.apAdd('https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_TheatricalTeaser_WeAreOverwatch_zhCN.mp4');
+</script>
+</html>
