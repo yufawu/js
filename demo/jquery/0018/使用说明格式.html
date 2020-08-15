@@ -1,0 +1,33 @@
+<h3><i class="iconfont icon-bianji"></i> 使用方法：</h3>
+
+<h4>1、head引入css文件</h4>
+<pre class="brush:html">
+&lt;link type="text/css" href="css/style.css" rel="stylesheet" /&gt;
+</pre>
+
+<h4>2、head引入js文件</h4>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<h4>3、body引入部分</h4>
+<pre class="brush:html">
+&lt;div class="page" id="Page"&gt;&lt;/div&gt;
+
+
+&lt;script type="text/javascript" src="js/MyPage.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+P.initMathod({
+params: {elemId: '#Page',total:'123'},
+requestFunction: function () {
+   // P.config.total = parseInt(Math.random() * 10 + 85);//此处模拟总记录变化
+
+	//TODO ajax异步请求过程,异步获取到的数据总条数赋值给 P.config.total
+	
+	//列表渲染自行处理
+	
+	console.log(JSON.stringify(P.config));
+}
+});
+&lt;/script&gt;
+</pre>
