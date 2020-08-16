@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery兼容好的翻页</title>
+
+<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zxf_page.js"></script>
+
+</head>
+<body>
+<!--翻页-->
+<div class="zxf_pagediv"></div>
+
+<script type="text/javascript">
+//翻页
+$(".zxf_pagediv").createPage({
+	pageNum: 20,
+	current: 6,
+	backfun: function(e) {
+		//console.log(e);//回调
+	}
+});
+</script>
+
+</body>
+</html>
