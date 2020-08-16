@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.zbmulselect.css"/>
+	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.zbmulselect.js" type="text/javascript" charset="utf-8"></script>
+    <script src="json/dataTest.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="muls-box">
+		<div class="muls-left-box">
+			<div class="muls-top">
+				<select class="muls-select muls-select-1" id="leftChoice1">
+					<option value="0">请选择</option>
+				</select>
+				<select class="muls-select" id="leftChoice2">
+					<option id="initLeft" value="0">请选择</option>
+				</select>
+				<button class="muls-btn" id="searchLeft">搜索</button>
+			</div>
+			<div class="muls-content">
+				<select id="select1" multiple="multiple" class="muls-content-select">
+				
+				</select>
+			</div>
+		</div>
+		
+		<div class="muls-box-btn">
+			<button class="muls-btn muls-btn-mid muls-btn-mid-1" id="addtoR">&gt;</button>
+			<button class="muls-btn muls-btn-mid" id="removeL">&lt;</button>
+		</div>
+		
+		<div class="muls-right-box">
+			<div class="muls-top">
+				<select class="muls-select muls-select-1" id="rightChoice1">
+					<option value="0">请选择</option>
+				</select>
+				<select class="muls-select" id="rightChoice2">
+					<option id="initRight" value="0">请选择</option>
+				</select>
+				<button class="muls-btn" id="searchRight">搜索</button>
+			</div>
+			<div class="muls-content">
+				<select id="select2" multiple="multiple" class="muls-content-select">
+				
+				</select>
+			</div>
+		</div>
+		
+	</div>
+    <br />
+    <div style="width: 800px;margin: 0px auto;">
+    	<button onClick="getRigthValues()"> 获取右侧数据</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+$(document).zbMulSelect({
+	data: dataTest
+});
+
+function getRigthValues(){
+	alert(JSON.stringify($(document).zbMulSelect('getData')));
+}
+</script>
+</html>
