@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+/*默认样式*/
+html {
+	font-size: 4vw;
+	height:100vh;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+*:not(input, textarea) {
+	-webkit-
+	-callout: inherit;
+	-webkit-user-select: auto;
+}
+body {
+	font-family: "Arial", "微软雅黑", "宋体";
+	font-size: 1rem;
+	color: #333;
+	-webkit-
+	-callout: inherit;
+	-webkit-user-select: auto;
+	margin: auto;
+	height:100vh;
+}
+a {
+	color: #54d09e;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:hover {
+	text-decoration: none;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+textarea, input {
+	resize: none;
+	outline: none;
+}
+textarea {
+	resize: none;
+	-webkit-appearance: none;
+}
+ul, ol, li {
+	list-style: none;
+}
+em {
+	font-style: normal;
+}
+input[type=button] {
+	-webkit-appearance: none;
+	outline: none
+}
+
+
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+b{ font-weight:normal;}
+.clear{ clear:both;font-size: 0;line-height: 0;height: 0;}
+
+/**下拉**/
+.topmenu{
+	width:100%;
+}
+.topmenu dt{
+	width:33.3%;
+	float:left;
+}
+.selectlist{
+	width:100%;
+	height:auto;
+	box-sizing: border-box;
+}
+.select_textdiv{
+	height:3rem;
+	width:100%;
+	line-height: 3rem;
+	text-align: center;
+	border-bottom: 2px solid #b3b3b3;
+	position:relative;
+	border-left:2px solid -webkit-linear-gradient(red, blue);
+}
+.select_textul{
+	width:100%;
+	line-height: 3rem;
+	box-sizing: border-box;
+	display: none;
+	width: 980px;
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+.select_first_ul{
+	width: 100%;
+    /*background: #eaeaea;*/
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+}
+.select_first_ul>li{
+	padding: 0 0.5rem;
+	box-sizing: border-box;
+}
+.select_first_ul>li>p{
+	width: 50%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-bottom:1px #b1b1b1 solid;
+}
+.focus>p{
+	border-bottom:1px #FF9800 solid !important;
+	color:#FF9800;
+}
+.select_second_ul{
+	width: 50%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background: #fff;
+    display: none;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    /*z-index: 1;*/
+}
+
+.down{
+	position: absolute;
+    top: 0;
+    right: 0.5rem;
+    display: inline-block;
+    width:1rem;
+    height:100%;
+}
+.down img{
+	width:1rem;
+	margin-top: 1rem;
+}
+.divfocus::after{
+	position: absolute;
+	bottom:0;
+	left:46%;
+	border-bottom:0.5rem solid #FF9800;
+	border-left:0.5rem solid transparent;
+	border-right:0.5rem solid transparent;
+	content: "";
+}
+.focusli{
+	background: #ffc107;
+	color: #FFFFFF;
+}
+.select_second_ul>li{
+	padding: 0 0.5rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eaeaea;
+}
+
+
+
+
+
+
+
