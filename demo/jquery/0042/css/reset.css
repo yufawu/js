@@ -1,0 +1,33 @@
+﻿@charset "UTF-8";
+/*重置样式*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td { margin:0; padding:0; }
+body {background-color:#fafafa;font-size: 14px;    font-family: "Microsoft YaHei"; min-width: 1000px; }
+table { border-collapse:collapse; border-spacing:0;color: #333; } 
+img { border:0; }
+ol,ul {  list-style:none; } 
+h1,h2,h3,h4,h5,h6 { font-size:100%; color: #333;  font-weight:normal;  }
+a{ text-decoration: none; color: #fbfbfb; }
+input {	vertical-align: middle;border:none; }
+input,button,textarea,select {outline: none;   font-family:"Microsoft YaHei"; font-size: 14px; }
+
+
+.wrap:after{display:block;clear:both;content :''}
+.wrap{zoom:1; margin: 0 auto;}
+.main { width: 1000px; margin: 0 auto;   }
+
+
+.clearfix:after { clear: both; display: block; content: '' }
+.clearfix { zoom: 1 }
+
+
+
+
+
+
+
+
+
+
+
+
+
