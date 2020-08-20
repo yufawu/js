@@ -1,0 +1,7 @@
+/**
+ * 版权声明： 智表（ZCELL）研发团队保留所有权利，未经明确的书面许可，不得修改本文档，或以任何形式或任何手段复制产品的任何部分，进行商业用途。
+ * 如需购买 请联系 邮件：108653210@qq.com
+ * Version: 1.0.0.1
+ * Create by zf  2018/3/2.
+ */
+*{font-family:'Times New Roman',Georgia,Serif;font-size:14px;margin:0;border:0}.book{position:relative;background:#fff;margin:0 1px 0 1px;width:100%;height:100%}.sheet{position:relative;background:#FFF;width:100%;height:100%}.sheet table{border-collapse:collapse;border-spacing:0;border:1px solid#b1b5ba;table-layout:fixed;word-break:break-all;margin-bottom:1px;padding:0;height:0;width:0;outline-width:0;max-width:none;max-height:none}.sheet table thead tr th{margin:0;padding:0;border:1px solid#c0c0c0;border-width:1px 1px 1px 1px;background-color:#f3f3f3;color:#000;cursor:default;text-align:center;height:20px;overflow:hidden;font-weight:normal}.sheet table tbody tr th{margin:0;padding:0;border:1px solid#c0c0c0;border-width:1px 1px 1px 1px;background-color:#f3f3f3;color:#000;font-weight:normal;cursor:default;text-align:center;height:20px;overflow:hidden}.sheet table tbody tr td{margin:1px;border:1px solid#c0c0c0;border-width:1px 1px 1px 1px;background:#fff;empty-cells:show;text-align:center;word-wrap:normal;overflow:hidden;white-space:pre}.cell-selected:not(.from){background-color:lightgreen !important}
