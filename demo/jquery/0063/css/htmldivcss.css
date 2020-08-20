@@ -1,0 +1,115 @@
+/* 模板在线 搜集整理 www.htmldivcss.com */
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+
+body{
+	background-color: transparent;
+    background-repeat: repeat, no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    background-size: auto, cover;
+	color: #fff;
+	font-family: 'Josefin Slab', Arial, sans-serif;
+	font-size: 13px;
+}
+.container{
+	position:relative;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
+.content{
+	position:relative;
+    width:580px;
+    margin: 0 auto;
+}
+h1{
+	margin:0px;
+	padding:20px;
+	font-size:42px;
+	color:#fff;
+	text-align:left;
+	font-weight:400;
+    text-align:left;
+}
+h1 span{
+	font-size:22px;
+	color:#ddd;
+	padding-top:10px;
+}
+
+.bmenu{
+    padding: 0px;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+.bmenu li{
+    font-size: 50px;
+    display: block;
+}
+.bmenu li a{
+	color: transparent;
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #fff;
+	letter-spacing: 1px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bmenu:hover li a{
+	text-shadow: 0px 0px 5px #0d1a3a;
+}
+.bmenu li a:hover{
+	color: #fff;
+	text-shadow: 0px 0px 1px #fff;
+	padding-left: 10px;
+}
