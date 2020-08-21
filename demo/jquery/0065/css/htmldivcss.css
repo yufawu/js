@@ -1,0 +1,16 @@
+*{margin:0; padding:0}
+body{ font:normal 12px/20px Verdana;}
+#page-wrap{width:700px; margin:50px auto}
+a{text-decoration:none}
+
+.tabs{list-style:none; overflow:hidden; padding-left:1px}
+.tabs li{display:inline}
+.tabs li a{display:block; float:left; padding:4px 8px; color:black; border:1px solid #ccc; background:#eee; margin:0 0 0 -1px;}
+.tabs li a.current{background:white; border-bottom:0; position:relative; top:2px; z-index:2}
+
+.box-wrapper{padding:20px; border:1px solid #ccc; margin:-1px 0 0 0; width:658px; height:200px; position:relative}
+.content-box{overflow:hidden; position:absolute; top:20px; left:20px; width:658px; height:200px}
+.current{z-index:100}
+
+.col-one,.col-two,.col-three{width:30%; float:left; position:relative; top:350px}
+.col-one,.col-two{margin-right:3%}
