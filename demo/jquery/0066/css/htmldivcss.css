@@ -1,0 +1,136 @@
+
+
+/* =============================================================================
+   goen° Header
+============================================================================= */
+
+.goen-hdr {
+	position: relative;
+	z-index: 5;
+	margin: 0 auto;
+	padding: 55px 26px 55px 0;
+	width: 280px;
+	height: 100px;
+}
+
+.goen-hdr a {
+	display: block;
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background: url(../img/common/logo_goen-hdr.png) no-repeat 0 0;
+	text-indent: 1000%;
+	white-space: nowrap;
+	word-wrap: none;
+}
+
+/* =============================================================================
+   GLOBAL NAVIGATION
+============================================================================= */
+
+.goen-gnav {
+	position: relative;
+	margin: -210px auto 0;
+	padding: 55px 0;
+	width: 1080px;
+}
+
+.goen-gnav__list {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100px;
+}
+
+.goen-gnav__item {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	height: 100px;
+	list-style: none;
+}
+
+.goen-gnav__item a {
+	display: block;
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: 1000%;
+	white-space: nowrap;
+	word-wrap: none;
+}
+
+.goen-gnav__item.is-current a:after {
+	content: '';
+	position: absolute;
+	top: 72px;
+	left: 50%;
+	display: block;
+	margin-left: -4px;
+	width: 8px;
+	height: 8px;
+	background: url(../img/common/gnav_current.png) no-repeat 0 0;
+}
+
+.goen-gnav__item--news {
+	left: 8px;
+}
+
+.goen-gnav__item--news a {
+	background-image: url(../img/common/gnav_news.png);
+}
+
+.goen-gnav__item--about {
+	left: 129px;
+}
+
+.goen-gnav__item--about a {
+	background-image: url(../img/common/gnav_about.png);
+}
+
+.goen-gnav__item--works {
+	left: 253px;
+}
+
+.goen-gnav__item--works a {
+	background-image: url(../img/common/gnav_works.png);
+}
+
+.goen-gnav__item--otayori {
+	right: 283px;
+}
+
+.goen-gnav__item--otayori a {
+	background-image: url(../img/common/gnav_otayori.png);
+}
+
+.goen-gnav__item--blog {
+	right: 166px;
+}
+
+.goen-gnav__item--blog a {
+	background-image: url(../img/common/gnav_blog.png);
+}
+
+.goen-gnav__item--blog.is-current a:after {
+	margin-left: -9px;
+}
+
+.goen-gnav__item--monogoen {
+	width: 124px;
+	right: 28px;
+}
+
+.goen-gnav__item--monogoen a {
+	background-image: url(../img/common/gnav_monogoen.png);
+}
+
