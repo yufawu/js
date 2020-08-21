@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery图片和pdf文件预览插件</title>
+	
+	<!--演示页面样式，使用时可以不引用-->
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	
+	<style type="text/css">
+	.container{
+		width: 900px;
+		margin: 20px auto;
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		float: left;
+		margin-left: 10px;
+	}
+	.box img{
+		width: 200px;
+		max-width: 200px;
+	}
+	.box button{
+		width: 100%;
+
+	}
+	</style>
+	
+</head>
+<body>
+	
+	<div class="container">
+		<div class="box">
+			<img src="img/girl-2.jpg" class="ez" alt="">
+			<button class="btn btn-primary btn-block delete" style="margin-top:10px;">关闭</button>
+		</div>
+		<div class="box">
+			<img src="img/pdf.jpg" class="ez" href="javascript.pdf" alt="">
+			<button class="btn btn-primary btn-block delete" style="margin-top:10px;">关闭</button>
+		</div>
+		<div class="box">
+			<img src="img/girl-1.jpg" class="ez" alt="">
+			<button class="btn btn-primary btn-block delete" style="margin-top:10px;">关闭</button>
+		</div>
+		<div class="box">
+			<img src="img/css3.jpg" class="ez" href="css3.pdf" alt="">
+			<button class="btn btn-primary btn-block delete" style="margin-top:10px;">关闭</button>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/EZView.js"></script>
+	<script type="text/javascript" src="js/draggable.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// Init pluging in all the images
+			$('img.ez').EZView();
+
+			// Add delete action
+			$('.delete').click(function() {
+			    $(this).prev().hide().end().hide();
+			});
+		})
+	</script>
+	
+	
+</body>
+</html>

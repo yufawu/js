@@ -1,0 +1,115 @@
+html,body {
+  padding: 0;
+  margin: 0;
+}
+.head{
+	width: 800px;
+	height: 800px;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	background: aquamarine;
+	float: left;
+}
+
+#backgroundImg{
+	width: 100%;
+	display: none;
+}
+.pieceImgModel{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.pieceImgBox1,.pieceImgBox2,.pieceImgBox3{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 200px;
+	height: 600px;
+	background: #FFFFFF;
+	cursor: move;
+}
+.pieceImgBox2{
+	left: 220px;
+}
+.pieceImgBox3{
+	left: 430px;
+}
+
+.ne{
+	cursor: ne-resize;
+	position: absolute;
+	z-index: 379;
+	opacity: 0.5;
+	margin-right: -4px;
+	margin-top: -4px;
+	right: 0;
+	top: 0;
+	background-color: #333;
+	border: 1px #EEE solid;
+	font-size: 1px;
+	height: 7px;
+	width: 7px;
+	display: none;
+}
+.se{
+	cursor: se-resize;
+	position: absolute;
+	z-index: 379;
+	opacity: 0.5;
+	margin-right: -4px;
+	margin-bottom: -4px;
+	right: 0;
+	bottom: 0;
+	background-color: #333;
+	border: 1px #EEE solid;
+	font-size: 1px;
+	height: 7px;
+	width: 7px;
+	display: none;
+}
+.upImg1,.upImg2,.upImg3,.upImg{
+	position: absolute;
+	cursor: pointer;
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	left: 0;
+	bottom: 0;
+	border-radius: 4px;
+	background: rgba(0,0,0,0.5);
+	color: white;
+}
+.upImg{
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	z-index: 9;
+}
+.imgBtn{
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	background-color: #2d8cf0;
+	border-color: #2d8cf0;
+	border-radius: 4px;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	line-height: 1.5;
+	margin-top: 20px;
+	float: left;
+}

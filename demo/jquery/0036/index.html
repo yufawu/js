@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link href="./css/index.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+		
+	</head>
+	<body>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			点我
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">导入数据</h4>
+					</div>
+					<div class="modal-body">
+						<div class="nav_tab">
+							<ul class="nav" id="nav">
+								<li class="active">数据导入步骤一<span class="glyphicon glyphicon-arrow-right"></span></li>
+								<li>数据导入步骤二<span class="glyphicon glyphicon-arrow-right"></span></li>
+								<li>数据导入步骤三<span class="glyphicon glyphicon-arrow-right"></span></li>
+								<li>数据导入步骤四<span class="glyphicon glyphicon-arrow-right"></span></li>
+								<li>数据导入步骤五<span class="glyphicon glyphicon-arrow-right"></span></li>
+								<li>数据导入步骤六</li>
+							</ul>
+						</div>
+						<div class="tab-content" id="tab-content">
+							<div class="content active">
+								<h5>请选择导入格式和报告期</h5>
+								<div class="modal_warp">
+									<p id="bgq">
+										是否选择报告期：
+										<label class="radio-inline">
+										  <input type="radio" name="bgq" id="inlineRadio1" value="是" checked> 是
+										</label>
+										<label class="radio-inline">
+										  <input type="radio" name="bgq" id="inlineRadio2" value="否" > 否
+										</label>
+									</p>
+									<p>导入类型：</p>
+									<div class="radio_btn">
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												DBase 文件（*.dbf）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												csv文件（*.csv）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												HTML文件（*.html;*.html）
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionslx" checked>
+												Excel文件（*.xls）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												Excel文件（2007或以上版本）（*.xlsx）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												Lotus 1-2-3文件（*.wk1）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												QuattroPro文件（*.wq1）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												XML文件（*.xml）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												JSON文件（*.json）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												MS Access数据库（*.mdb;*.accdb）
+											</label>
+										</div>
+										<div class="radio disabled">
+											<label>
+												<input type="radio" name="optionslx" disabled>
+												ODBC
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="modal_warp" id="bgq_content">
+									<label>选择报告期：</label>
+									<input type="text" id="datetime" />
+									<input type="hidden" id="datetime_hid" />
+									<div class="timeline" id="timeline">
+										<ul class="year" id="year">
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<h5>请选择一个所需的导入模式</h5>
+								<div class="modal_warp">
+									<p>导入模式：</p>
+									<div class="radio_btn">
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsmodal">
+												添加：添加记录到目标表
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsmodal">
+												更新：更新目标和源记录相符的数据
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsmodal">
+												添加或更新：如果目标存在相同距离，更新它。否则，添加他
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsmodal" checked>
+												删除：删除目标中和源记录相符的数据
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="optionsmodal">
+												复制：删除目标全部记录，并从源重新导入
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<h5>选择开始行</h5>
+								<div class="modal_warp">
+									<div class="zd">
+										<label>字段名行：</label>
+										<input type="text" />
+									</div>
+									<div class="zd">
+										<label>第一个数据行：</label>
+										<input type="text" />
+									</div>
+									<div class="zd">
+										<label>最后一个数据行：</label>
+										<input type="text" />
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<h5>请上传导入文件</h5>
+								<div class="modal_warp">
+									<p>导入从：</p>
+									<input type="text" class="file_text" id="file_text" />
+									<span class="file_btn" id="file_btn">...</span>
+									<input type="file" id="file_o" class="hidden" />
+									<div class="sheet_warp">
+										<ul id="sel">
+											<li>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" />sheet1
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" />sheet2
+													</label>
+												</div>
+											</li>
+										</ul>
+										<div class="btn_gn">
+											<button class="btn btn-xs" id="all_sel">全选</button>
+											<button class="btn btn-xs" id="all_nosel">全部取消全选</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<h5>请核对目标字段和导入字段</h5>
+								<div class="modal_warp">
+									<div class="head">
+										<p>
+											<label>源表：</label>
+											<select id="sheet_sel">
+												<option>请选择</option>
+												<option>sheet1</option>
+												<option>sheet2</option>
+											</select>
+										</p>
+										<p>
+											<label>目标表：</label>
+											<span id="sel_text"></span>
+										</p>
+									</div>
+									<table class="table table-responsive table-bordered" id="table_size">
+										<thead>
+											<tr>
+												<th><input type="checkbox"></th>
+												<th>目标字段</th>
+												<th>导入字段</th>
+												<th>类型</th>
+												<th>长度</th>
+												<th>比例</th>
+												<th>主键</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td>B</td>
+												<td>
+													<select>
+														<option>111</option>
+														<option>222</option>
+													</select>
+												</td>
+												<td>varchar</td>
+												<td>255</td>
+												<td>0</td>
+												<td>id</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td>C</td>
+												<td>
+													<select>
+														<option>111</option>
+														<option>222</option>
+													</select>
+												</td>
+												<td>varchar</td>
+												<td>255</td>
+												<td>0</td>
+												<td>id</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="content">
+								<h5>我们已收集向导导入数据时所需的全部信息，点击开始进行导入</h5>
+								<div class="modal_warp">
+									<p>表：</p>
+									<p>已处理：</p>
+									<p>错误：</p>
+									<p>已更新：</p>
+									<p>时间：</p>
+									<div class="report"></div>
+									<div class="progress_bar">
+										<p class="track"></p>
+										<div class="xx"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button id="before_btn" class="btn btn-danger pull-left" disabled>上一步</button>
+							<button class="btn btn-primary pull-right" disabled id="start">开始</button>
+							<button id="next_btn" class="btn btn-success pull-right">下一步</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	
+</body>	
+</html>

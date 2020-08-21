@@ -1,0 +1,258 @@
+body {
+	margin: 0;
+}
+
+#index-banner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	font-family:microsoft yahei;
+}
+
+#index-banner .banner_bg {
+	height: 395px;
+	width: 100%;
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+
+.night .banner_bg {
+	background-image: url(../images/night.jpg);
+}
+
+.morning .banner_bg {
+	background-image: url(../images/morning.jpg);
+}
+
+.noon .banner_bg {
+	background-image: url(../images/noon.jpg);
+}
+
+.afternoon .banner_bg {
+	background-image: url(../images/afternoon.jpg);
+}
+
+#index-banner .banner_m {
+	height: 395px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+
+.night .banner_m {
+	background-image: url(../images/night_m.jpg);
+}
+
+.morning .banner_m {
+	background-image: url(../images/morning_m.jpg);
+}
+
+.noon .banner_m {
+	background-image: url(../images/noon_m.jpg);
+}
+
+.afternoon .banner_m {
+	background-image: url(../images/afternoon_m.jpg);
+}
+
+.lines {
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	height: 1px;
+	background: #767676;
+}
+
+.line-one {
+	mix-blend-mode: color-burn;/*颜色加深， IE不支持，可改为黑色半透明*/
+}
+
+.line-two {
+	opacity: 0.4;
+	mix-blend-mode: color-dodge;/*颜色减淡，  IE不支持，可改为白色半透明*/
+}
+
+.line-top.line-two {
+	top: 1px;
+}
+
+.line-bottom.line-one {
+	bottom: 0px;
+}
+
+.line-bottom.line-two {
+	bottom: 1px;
+}
+
+.cloud {
+	width: 5792px;
+	height: 395px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	background: url(../images/cloud.png) repeat-x;
+	mix-blend-mode: screen;/* IE不支持，需要重新做云 */
+	opacity: 0.6;
+	animation: marquee 60s linear infinite;
+}
+
+/*适配IE11*/
+@media all and (-ms-high-contrast:none) {
+ 
+	.line-one {
+		background: #000;
+		opacity: 0.3;
+	}
+
+	.line-two {
+		background: #fff;
+		opacity: 0.4;
+	}
+
+	.cloud {
+		background: none;
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(1448px);
+	}
+}
+
+.txt {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 60px;
+	color: #fff;
+	z-index: 10;
+	line-height: 1;
+	letter-spacing: 3px;
+	text-shadow: 0px 0px 4px rgba(13,53,105,0.6);
+}
+
+.txt1 {
+	margin-top: 120px;
+	margin-bottom: 0;
+	opacity: 0;
+}
+
+.txt2 {
+	margin-top: 42px;
+	opacity: 0;
+}
+
+.hoverAll {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 395px;
+	z-index: 40;
+}
+
+#index-banner .swiper-container {
+	opacity: 0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 21px;
+	z-index: 20;
+}
+
+#index-banner .swiper-button-prev,#index-banner .swiper-button-next {
+	opacity: 0;
+	outline: none;
+	background-size: 6px auto;
+	width: 38px;
+	height: 38px;
+	background-color: #272727;
+	transition: background-color 0.2s;
+}
+
+#index-banner .swiper-button-prev:hover,#index-banner .swiper-button-next:hover {
+	background-color: #0f0f0f;
+}
+
+#index-banner .swiper-button-prev {
+	left: calc(50% - 505px);
+}
+
+#index-banner .swiper-button-next {
+	right: calc(50% - 505px);
+}
+
+#index-banner .swiper-pagination {
+	opacity: 0;
+	top: 0;
+	bottom: unset;
+	right: 0;
+	width: 940px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+#index-banner .swiper-pagination-bullet {
+	width: 35px;
+	height: 3px;/*增加可点击区域*/
+	opacity: 1;
+	background: none;
+	border-radius: 0;
+	margin: 0 1px;
+	vertical-align: top;
+	border-top: 4px solid #272727;
+	outline: none;
+}
+
+#index-banner .swiper-pagination-bullet-active {
+	height: 0px;
+	border-top: 7px solid #ff7900;
+	padding-bottom: 0;
+}
+
+#index-banner .swiper-slide {
+	width: auto;
+}
+
+#index-banner .swiper-slide img {
+	border: 8px solid rgba(255,255,255,0.5);
+	opacity: 0.8;
+	transition: all 0.3s;
+}
+
+#index-banner .swiper-slide-active img,#index-banner .swiper-slide-duplicate-active img {
+	opacity: 1;
+	border: 8px solid #fff;
+}
+
+#index-banner .animating  .swiper-slide img {
+	opacity: 1;
+	border: 8px solid rgba(255,255,255,1);
+}
+
+.hoverBtn {
+	width: 958px;
+	height: 353px;
+	position: absolute;
+	z-index: 30;
+	top: 21px;
+	cursor: pointer;
+}
+
+.hoverPrev {
+	left: calc(50% - 1479px);
+}
+
+.hoverNext {
+	left: calc(50% + 521px);
+}

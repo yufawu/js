@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分类条件筛选列表</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/current.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <div class="cation-content">
+        <div style="height:50px"></div>
+        <!-- 可以删除 -->
+        <div class="cation-middle">
+            <dl class="cation-list">
+                <dt>分类</dt>
+                <dd>
+                    <a href="#" rel="" name="mode" class="all on">全部</a>
+                    <a href="#" rel="服装鞋包" name="mode" class="default">服装鞋包</a>
+                    <a href="#" rel="家电数码" name="mode" class="default">家电数码</a>
+                    <a href="#" rel="英文外贸" name="mode" class="default">英文外贸</a>
+                    <a href="#" rel="综合通用" name="mode" class="default">综合通用</a>
+                    <a href="#" rel="食品保健" name="mode" class="default">食品保健</a>
+                    <a href="#" rel="团购模板" name="mode" class="default">团购模板</a>
+                    <a href="#" rel="美容护肤" name="mode" class="default">美容护肤</a>
+                    <a href="#" rel="珠宝饰品" name="mode" class="default">珠宝饰品</a>
+                    <a href="#" rel="鲜花礼品" name="mode" class="default">鲜花礼品</a>
+                    <a href="#" rel="童装母婴" name="mode" class="default">童装母婴</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>主题</dt>
+                <dd>
+                    <a href="#" rel="" name="theme" class="all on">全部</a>
+                    <a href="#" rel="古典雅致" name="theme" class="default">古典雅致</a>
+                    <a href="#" rel="可爱温馨" name="theme" class="default">可爱温馨</a>
+                    <a href="#" rel="时尚简约" name="theme" class="default">时尚简约</a>
+                    <a href="#" rel="潮流酷炫" name="theme" class="default">潮流酷炫</a>
+                    <a href="#" rel="节日庆典" name="theme" class="default">节日庆典</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>色系</dt>
+                <dd>
+                    <a href="#" rel="" name="system" class="all on">全部</a>
+                    <a href="#" rel="多彩" name="system" class="default">多彩</a>
+                    <a href="#" rel="橙色" name="system" class="default">橙色</a>
+                    <a href="#" rel="粉色" name="system" class="default">粉色</a>
+                    <a href="#" rel="红色" name="system" class="default">红色</a>
+                    <a href="#" rel="绿色" name="system" class="default">绿色</a>
+                    <a href="#" rel="蓝色" name="system" class="default">蓝色</a>
+                    <a href="#" rel="黑色" name="system" class="default">黑色</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>价格</dt>
+                <dd>
+                    <a href="#" rel="" name="price" class="all on">全部</a>
+                    <a href="#" rel="2000 - 6000" name="price" class="default">2000 - 6000</a>
+                    <a href="#" rel="6000 - 10000" name="price" class="default">6000 - 10000 </a>
+                    <a href="#" rel="10000 - 14000" name="price" class="default">10000 - 14000 </a>
+                    <a href="#" rel="18000 - 22000" name="price" class="default">18000 - 22000</a>
+                    <a href="#" rel="26000 - 30000" name="price" class="default">26000 - 30000</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(function() {
+            new SelectTag({
+                child: ".default", //所有默认
+                over: 'on', //当前选中
+                all: ".all" // 默认全部
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>

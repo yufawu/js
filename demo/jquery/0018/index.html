@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery自定义分页</title>
+
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="page" id="Page"></div>
+
+
+<script type="text/javascript" src="js/MyPage.js"></script>
+<script type="text/javascript">
+P.initMathod({
+params: {elemId: '#Page',total:'100',pageSize:'10'},
+requestFunction: function () {
+   // P.config.total = parseInt(Math.random() * 10 + 85);//此处模拟总记录变化
+
+	//TODO ajax异步请求过程,异步获取到的数据总条数赋值给 P.config.total
+	
+	//列表渲染自行处理
+	
+	console.log(JSON.stringify(P.config));
+}
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+body,figure,figcaption,img,h2,p{padding: 0; margin: 0;}
+body{width: 100%;}
+figure{position:relative; float: left; overflow: hidden; height: 350px; width: 33.33%; }
+figcaption{position: absolute; top: 0; left:0;color: #fff; font-family: "微软雅黑";  }
+figure img{opacity: 0.8;}
+figure figcaption,figure figcaption p,figure img{transition:all 0.35s;}
+figure figcaption,figure figcaption div{transition:all 0.35s;}
+figure figcaption p,figure figcaption h2{transition:all 0.35s;}
+figure:hover img{transform:translate(-150px,0); opacity: 0.5}
+@media screen and ( max-width: 600px) {
+    figure{width: 100%}
+}
+@media  screen and (min-width: 601px) and ( max-width: 1000px) {
+    figure{width: 50%}
+}
+@media screen and (min-width: 1001px) {
+    figure{width: 33.33%}
+}
+.one{background: #f9aa0f;}
+.one figcaption{padding: 20px;}
+.one figcaption p{ text-align: center; background:#fff; color: #333; margin-top: 3px; transform:translate(-200px,0);}
+.one:hover figcaption p{transform:translate(0,0);}
+.one:hover figcaption p:nth-of-type(1){transition-delay:0.15s;}
+.one:hover figcaption p:nth-of-type(2){transition-delay:0.3s;}
+.one:hover figcaption p:nth-of-type(3){transition-delay:0.35s;}
+
+.two{background-color: #60299e;}
+.two figcaption{width: 100%; height: 100%;}
+.two figcaption div{width: 80%; height: 80%; border: 2px solid #fff; position: absolute; top:10%; left: 10% ; transform:translate(0,-350px) rotate(0deg) scale(0.5,0.5);}
+.two figcaption h2{  margin-left: 15%; margin-top: 11%; }
+.two figcaption p{margin-left: 15%; transform:translate(0,30px);opacity: 0;}
+.two:hover figcaption div{transform:translate(0,0) rotate(360deg) scale(1,1);}
+.two:hover figcaption p{opacity: 1; transform:translate(0,0)}
+
+.three figcaption{margin-top: 20%; margin-left: 40%; transform:skew(90deg,0) }
+.three:hover figcaption{transform:skew(0,0)}
+
+.four{background-color: #89cf3f;}
+.four figcaption{width: 100%; height: 100%;}
+.four figcaption div{width: 100%; height: 100%; border: 2px solid #fff; position: absolute;top: 0;left: 0; opacity: 0;}
+.four:hover figcaption div{transform:scale(0.8,0.8); opacity: 1;}
+.four:hover img{transform:scale(1.2,1.2);}
+.four figcaption h2{margin-left: 15%; margin-top: 15%; transform:scale(1.2,1.2)}
+.four figcaption p{margin-left: 15%; transform:scale(1.2,1.2)}
+.four:hover figcaption h2{transform:scale(1,1);}
+.four:hover figcaption p{transform:scale(1,1);}
+
+.five{ background-color: #b5b5b5;}
+.five figcaption{padding: 10% 25%; width: 100%; height: 100%; transform:translate(0,20px)}
+.five figcaption div{width:100%; height: 100%; background-color:rgba(250,250,250,0.8); position: absolute; top:350px; left:0;}
+.five figcaption div input{transform:rotate(15deg); margin-left:40%; margin-top: 5%; }
+.five:hover figcaption div{ transform-origin:0 0; transform:rotate(-15deg);}
+.five:hover figcaption{ transform:translate(0,0)}
+
+.six{background-color: #777569;}
+.six figcaption{ width: 100%; height: 100%;}
+.six figcaption h2{margin-left: 30%; margin-top: 10%;}
+.six figcaption p{margin-left: 30%; }
+.six figcaption div{position: absolute; border: 2px solid #fff;  }
+.six figcaption div.border1{width: 60%; height: 0%; top: 45%; left: 20%; border-top: none; border-bottom: none;}
+.six figcaption div.border2{width: 0%; height: 60%; top: 20%; left: 50%; border-left: none; border-right: none;}
+
+.six:hover figcaption div.border1{ height: 80%; top:10%;}
+.six:hover figcaption div.border2{ width: 80%; left:10%;}
+.six:hover figcaption h2{margin-top: 20%;}

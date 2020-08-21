@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/font-awesome.css" />
+	<link rel="stylesheet" href="css/commonSearch.css" />
+	
+	<script type="text/javascript" src="bootstrap/js/jquery.js" ></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/commonSearch.js" ></script>
+	
+	<body>
+		<div id="search"></div>
+		
+		<script>
+			$(function(){
+				var commonSearchData = {
+					url : "",//查询url
+					title : "您已选择",
+					dataList : [{
+						id: "demo1",
+						title: "电脑整机",
+						selectorList: [{
+							id: "selector1",
+							name: "笔记本"
+						},
+						{
+							id: "selector2",
+							name: "台式机"
+						},{
+							id: "selector3",
+							name: "游戏本"
+						},{
+							id: "selector4",
+							name: "一体机"
+						},{
+							id: "selector5",
+							name: "平台电脑"
+						},{
+							id: "selector6",
+							name: "服务器/工作站"
+						}],
+						multipleSelect: false,
+						more: true
+					},{
+						id: "demo2",
+						title: "电脑配件",
+						selectorList: [{
+							id: "selector21",
+							name: "组装电脑"
+						},
+						{
+							id: "selector22",
+							name: "显示器"
+						},{
+							id: "selector23",
+							name: "CPU"
+						},{
+							id: "selector24",
+							name: "主板"
+						},{
+							id: "selector25",
+							name: "显卡"
+						},{
+							id: "selector26",
+							name: "机箱"
+						}],
+						multipleSelect: true,
+						more: true
+					},
+					{
+						id: "demo3",
+						title: "分类",
+						selectorList: [{
+							id: "selector31",
+							name: "游戏本"
+						},
+						{
+							id: "selector32",
+							name: "轻薄本"
+						},{
+							id: "selector33",
+							name: "二合一笔记本"
+						},{
+							id: "selector34",
+							name: "常规笔记本"
+						},{
+							id: "selector35",
+							name: "加固笔记本"
+						},{
+							id: "selector36",
+							name: "其他"
+						}],
+						multipleSelect: false,
+						more: false
+					}],
+					total:0
+				};
+				$("#search").commonSearch(commonSearchData,function(param){
+					//TODO 查询回调函数
+				});
+			})
+		</script>
+	</body>
+</html>

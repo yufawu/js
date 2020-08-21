@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper的切换</title>
+	
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/demo.css">
+	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+</head>
+<body>
+<div id="certify" class="sect10">
+    <div class="container container-carousel">
+        <div class="community-carousel">
+            <div id="caseBlanche">
+                <div id="rond">
+                    <div id="test"></div>
+                </div>
+            </div>
+            <div id="caseBlanche1">
+                <div id="rond1">
+                    <div id="test1"></div>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper js_animeSwiper">
+
+                    <div class="swiper-slide">
+                        <div class="slide-holder">
+                            <div class="ava">
+                                <img src="images/community04.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="author-wrap">
+                                <span class="name">Alexey  Terehov</span>
+                                <span class="role">ADMITAD 广告联盟公共关系经理</span>
+                            </div>
+                            <blockquote>我本人认识HOQU的联合创始人。<br>他们是一支知识渊博、经验丰富的<br>队伍。对他们的竞争力我没有任何<br>怀疑。我们合作得很愉快。</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-holder">
+                            <div class="ava">
+                                <img src="images/community03.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="author-wrap">
+                                <span class="name">David Gasparyan</span>
+                                <span class="role">Phonexa Holdings, LLC创始人、主席</span>
+                            </div>
+                            <blockquote>我本人认识HOQU的联合创始人。<br>他们是CPA行业的顶尖专家，我信赖<br>他们。我深信他们会按时推出一个<br>成功的项目。</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-holder">
+                            <div class="ava">
+                                <img src="images/community02.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="author-wrap">
+                                <span class="name">Taras Gushcha</span>
+                                <span class="role">Dvoma.Pro网站和 ANTIKONFA IT大会的组织者</span>
+                            </div>
+                            <blockquote>很高兴看到他们发展得如此之快。<br>他们是值得信赖、极具竞争力的<br>领域专家。我一直钦佩他们与合作<br>伙伴合作的方式，我坚信HOQU将会<br>取得成功。祝他们成功挑战 IT业的<br>新高度。</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-holder">
+                            <div class="ava">
+                                <img src="images/community01.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="author-wrap">
+                                <span class="name">Alexey  Terehov</span>
+                                <span class="role">ADMITAD 广告联盟公共关系经理</span>
+                            </div>
+                            <blockquote>这些人打造了一个高素质的团队，<br>汇聚了来自MarketCall项目的最好的<br>程序员和专家。我毫不怀疑他们在<br>CPA领域的专业知识。我在多个行业<br>专题大会上遇到过 Aleksandr Duzhnikov。<br>如果他们能设法在紧迫的时<br>间内交付，那HOQU项目将有一个<br>光明的前景。</blockquote>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-holder">
+                            <div class="ava">
+                                <img src="images/community04.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="author-wrap">
+                                <span class="name">POLIN AL EKSANDR</span>
+                                <span class="role">投资银行家，风险投资者（区块链）</span>
+                            </div>
+                            <blockquote>TouchTunes前任副总裁，专业高级技术开发人员，广告业务数据专家。我很兴奋，我认为这是行业的一个转变。而且我认为这会让我们大家在分支项目中获得新样子。</blockquote>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-btn-next"></div>
+            <div class="swiper-btn-prev"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // community-carousel
+    if ( $( ".community-carousel" ).length ) {
+        var swiperVideo = new Swiper('.community-carousel .swiper-container', {
+            navigation: {
+                nextEl: '.community-carousel .swiper-btn-next',
+                prevEl: '.community-carousel .swiper-btn-prev',
+            },
+            loopAdditionalSlides:3,
+
+            effect: 'slide',
+            grabCursor: true,
+            paginationClickable:true,
+            centeredSlides: true,
+
+            loop:true,
+            autoplay: true,
+            slidesPerView: "auto",
+            initialSlide:1,
+            keyboardControl:true,
+            slideToClickedSlide:true,
+            preventClicks:false,
+            speed:800,
+            followFinger:false,
+            onInit: function(swiper){
+
+            },
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=0">
+  
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<img src="uploads/top.png" id="top">
+
+<ul id="comment-list">
+  <li class="list">
+    <div class="face"><img src="uploads/face.png"></div>
+    <div class="guest">
+      <div class="info">
+        <h4 class="name">不是只有你许诺<span class="level"><img src="img/level4.png"></span></h4>
+        <div class="date">2018-4-15</div>
+      </div>
+      <div class="star"><img src="img/star.png"></div>
+      <p class="detail">以前去过这个店吧，不过不是在这，是另外一个分店，店里装修分格都可以，下单也方便，是立点立上的，不像其他地方是自己去挑选，菜品都可以</p>
+      <div class="thumb" thumblist="list1">
+        <img src="uploads/s1_1.jpg">
+        <img src="uploads/s1_2.jpg">
+        <img src="uploads/s1_3.jpg">
+        <img src="uploads/s1_4.jpg">
+      </div>
+    </div>
+    
+  </li>
+  <li class="list">
+    <div class="face"><img src="uploads/face.png"></div>
+    <div class="guest">
+      <div class="info">
+        <h4 class="name">开心美女小静<span class="level"><img src="img/level4.png"></span></h4>
+        <div class="date">2018-3-15</div>
+      </div>
+      <div class="star"><img src="img/star.png"></div>
+      <p class="detail">非常好的吃烤肉的地方，我一定会去第二次。 就冲着他们新鲜的活碰乱跳的基围虾</p>
+      <div class="thumb" thumblist="list2">
+        <img src="uploads/s2_1.jpg">
+        <img src="uploads/s2_2.jpg">
+      </div>
+    </div>
+    
+  </li>
+  <li class="list">
+    <div class="face"><img src="uploads/face.png"></div>
+    <div class="guest">
+      <div class="info">
+        <h4 class="name">美食大师张女士<span class="level"><img src="img/level4.png"></span></h4>
+        <div class="date">2018-2-15</div>
+      </div>
+      <div class="star"><img src="img/star.png"></div>
+      <p class="detail">首先我来说说优点，第一，就是大家都是手机点菜，这个很好避免过多浪费，第二就是基围虾很新鲜，这个我喜欢。不足之处，一是居然有苍蝇到处飞，可怕，二是，火太小了，三个人只烤了三轮</p>
+      <div class="thumb" thumblist="list3">
+        <img src="uploads/s3_1.jpg">
+      </div>
+    </div>
+    
+  </li>
+</ul>
+
+  <!-- Swiper -->
+  <div class="swiper-container" id="origin-img">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-pagination"></div>
+    <div class="upload">xxx上传于2018-06-17</div>
+  </div>
+
+  <script src="js/swiper.min.js"></script>
+  <script>
+  imgsdata={"list1":["b1_1.jpg","b1_2.jpg","b1_3.jpg","b1_4.jpg","b1_5.jpg","b1_6.jpg","b1_7.jpg","b1_8.jpg","b1_9.jpg"],
+        "list2":["b2_1.jpg","b2_2.jpg"],
+		"list3":["b3_1.jpg"],
+	  }
+  
+  var swiper = new Swiper('.swiper-container',{
+	zoom:true,
+	  width: window.innerWidth,
+	  virtual: true,
+		spaceBetween:20,
+		pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+       },
+	   on:{
+         click: function(){
+           $('#origin-img').fadeOut('fast');
+		   this.virtual.slides.length=0;
+           this.virtual.cache=[]; 
+		   swiperStatus=false;
+		   
+       },
+    },
+  
+  });
+  
+  $('.thumb img').click(function(){
+	  clickIndex=$(this).index();
+  
+	  imglist=$(this).parent().attr('thumblist');
+	  imgs = imgsdata[imglist];
+	  for(i=0;i<imgs.length;i++){
+		   swiper.virtual.appendSlide('<div class="swiper-zoom-container"><img src="uploads/'+imgs[i]+'" /></div>');
+		}
+	  swiper.slideTo(clickIndex);
+	  $('#origin-img').fadeIn('fast');
+	  swiperStatus=true;
+	  
+  })
+	  
+//切换图状态禁止页面缩放	
+	document.addEventListener('touchstart',function (event) {  
+            if(event.touches.length>1 && swiperStatus){  
+                event.preventDefault();  
+            }  
+        })  
+        var lastTouchEnd=0;  
+    document.addEventListener('touchend',function (event) {  
+            var now=(new Date()).getTime();  
+            if(now-lastTouchEnd<=300){  
+                event.preventDefault();  
+            }  
+            lastTouchEnd=now;  
+        },false)
+
+    document.addEventListener('touchmove',function(e){
+	    if(swiperStatus){
+            e.preventDefault();
+        }
+    })	
+
+	
+	   
+  </script>
+</body></html>
