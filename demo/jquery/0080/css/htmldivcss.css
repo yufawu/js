@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li {padding:0; margin:0;}
+body {font:12px/normal Verdana, Arial, Helvetica, sans-serif;}
+ul,li {list-style-type:none; text-transform:capitalize;}
+.clear {clear:both; *display:inline;/*IE only*/}
+
+/*menu*/
+#menu {margin:100px auto; display:block; width:1000px; height:34px;}
+#nav {display:block;}
+#nav .mainlevel {float:left; background:#3f240e; text-align:center; display:block;}
+#nav .mainlevel a {color:#fff; text-decoration:none; line-height:34px; height:34px; text-align:center; padding:0 20px; display:block; _width:48px;}
+#nav .mainlevel a:hover {color:#3f240e; text-decoration:none; background:#678900 url(../images/slide-pannel_14.png) 0 0 repeat-x;}
+#nav .mainlevel ul {position:absolute; display:none; *width:2000px;/*IE is great need, width>=li.length*/}
+#nav .mainlevel li {float:left; background:#3f240e;}
+#nav .mainlevel li a {padding:0 12px; line-height:24px; height:24px; display:block; _padding-bottom:6px;/*IE6 only*/}
+#nav .mainlevel li a:hover {color:#3f240e; text-decoration:none; background:#678900 url(../images/slide-pannel_14.png) 0 0 repeat-x;}
+#nav li a em/*input an em tag as a space*/ {padding:0 3px;}
+.note {color:#3f240e; border-right:1px solid #fff; background:#678900 url(../images/slide-pannel_14.png) 0 0 repeat-x; display:block; line-height:34px; padding:0 3em;}
+.Triangle_con {height:9px; background:url(../images/bird.png) 36px 0 no-repeat; display:block; _margin-bottom:-6px;/*IE6 only*/}
+.log {margin:100px auto; width:1000px; text-transform:capitalize; line-height:200%;}
