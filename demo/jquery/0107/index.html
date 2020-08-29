@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,相册代码,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为jQuery响应式css3动画相册，属于站长常用代码，更多相册代码代码请访问模板在线JS代码频道。" />
+<title>jQuery响应式css3动画相册_模板在线</title>
+
+<link rel="stylesheet" href="css/htmldivcss.css" />
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/scripts.js"></script>
+
+</head>
+<body>
+<!-- 代码 开始 -->
+  <div id="gallery-container">
+    
+    <ul class="items--small">
+      <li class="item"><a href="#"><img src="images/small-1.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-2.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-3.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-4.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-5.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-6.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-7.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-8.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-9.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-10.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-11.png" alt="" /></a></li>
+      <li class="item"><a href="#"><img src="images/small-12.png" alt="" /></a></li>
+    </ul>
+    <ul class="items--big">
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-1.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-2.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-3.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-4.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-5.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-6.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-7.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-8.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-9.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-10.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-11.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+      <li class="item--big">
+        <a href="#">
+          <figure>
+            <img src="images/big-12.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+          </a>
+      </li>
+    </ul>
+    <div class="controls">
+      <span class="control icon-arrow-left" data-direction="previous"></span> 
+      <span class="control icon-arrow-right" data-direction="next"></span> 
+      <span class="grid icon-grid"></span>
+      <span class="fs-toggle icon-fullscreen"></span>
+    </div>
+    
+  </div>
+  
+
+<script>
+    $(document).ready(function(){
+     $('#gallery-container').sGallery({
+        fullScreenEnabled: true
+      });
+    });
+</script>
+<!-- 代码 结束 -->
+<div style="text-align:center;margin:30px 0">
+<p>来源：<a href="https://github.com/SaraSoueidan/s-gallery" target="_blank">s-gallery</a>　代码整理：<a href="http://www.htmldivcss.com/" target="_blank">模板在线</a>　感谢：<a href="http://blog.hexccc.com" target="_blank">wordpress Xcoder</a></p>
+<p>＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+<p></p>
+<p><p>jQuery响应式css3动画相册，可全屏查看，css3动画展现，支持键盘方向键翻页，效果优美简洁。兼容主流浏览器，模板在线推荐下载！</p><p><br /></p><p>使用方法：</p><p>1、head区域引用文件 htmldivcss.css, plugins.js, jquery.min.js, scripts.js</p><p>2、在文件中加入&lt;!-- 代码 开始 --&gt;&lt;!-- 代码 结束 --&gt;区域代码</p><p>3、复制images文件夹里的图片到相应的路径</p><p>4、图片标题可以修改html代码中的figcaption标签中的文字caption</p></p>
+<p style="margin:20px 0"></p>
+</div>
+</body>
+</html>
