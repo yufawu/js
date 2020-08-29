@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,图片特效,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为jQuery small2big图片缩放插件，属于站长常用代码，更多图片特效代码请访问模板在线JS代码频道。" />
+<title>jQuery small2big图片缩放插件_模板在线</title>
+<link type="text/css" rel="stylesheet" href="css/small2big.css"/>
+<script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="application/javascript" src="js/jquery.mgang.small2big.js"></script>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div id="pageLink">
+    <a href="index.html">demo1</a>
+    <a href="demo2.html">demo2</a>
+    <a href="demo3.html">demo3</a>
+</div>
+<ul class="s2b_col" id="s2b_col">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#s2b_col").small2big({
+			s2bRadius : 170, // 图片被放大时的圆形外框的半径
+			s2bColLiRowMargin : -10, // 每个圆形之间的距离
+			s2bLiBorderColor : "#000" // 圆形外框颜色
+			// s2bLiAlign : "V" 图片竖排
+		}).initS2bCol().addS2bFunction();
+	});
+</script>
+<!-- 代码 结束 -->
+<div style="text-align:center;margin:350px 0">
+<p>来源：<a href="http://www.jq22.com/jquery-info777" target="_blank">jq22.com</a>　代码整理：<a href="http://www.htmldivcss.com/" target="_blank">模板在线</a>　感谢：<a href="http://blog.hexccc.com/service/" target="_blank">wordpress Xcoder</a></p>
+<p>＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+<p></p>
+<p><p>jQuery small2big图片缩放插件，兼容主流浏览器，模板在线推荐下载！</p><p><br /></p><p>使用方法：</p><p>1、head区域引用文件css和js库</p><p>2、在文件中加入html代码， 一个li对应一个图片，images文件夹的图片按数字命名 1.jpg, 2.jpg, ...</p><p>&lt;ul class=&quot;s2b_col&quot; id=&quot;s2b_col&quot;&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p> &nbsp; &nbsp;&lt;li&gt;&lt;/li&gt;</p><p>&lt;/ul&gt;</p><p>3、引入以下js代码</p><p>$(document).ready(function(){</p><p><span class="Apple-tab-span"></span>$(&quot;#s2b_col&quot;).small2big({</p><p><span class="Apple-tab-span"></span>s2bRadius : 170, // 图片被放大时的圆形外框的半径</p><p><span class="Apple-tab-span"></span>s2bColLiRowMargin : -10, // 每个圆形之间的距离</p><p><span class="Apple-tab-span"></span>s2bLiBorderColor : &quot;#000&quot; // 圆形外框颜色</p><p><span class="Apple-tab-span"></span>// s2bLiAlign : &quot;V&quot; 图片竖排</p><p><span class="Apple-tab-span"></span>}).initS2bCol().addS2bFunction();</p><p>});</p></p>
+<p style="margin:20px 0"></p>
+</div>
+</body>
+</html>
