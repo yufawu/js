@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页右侧div+css返回顶部样式代码_模板在线</title>
+<meta name="keywords" content="jquery特效,返回顶部" />
+<meta name="description" content="div css网页右侧返回顶部样式代码。" />
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+fieldset,img{border:0;}
+:focus{outline:0;}
+ol,ul{list-style:none;list-style-position:outside;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,i,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+body,button,input,select,textarea{font:12px/1.5 微软雅黑,arial,sans-serif;}
+button,input,select,textarea,h1,h2,h3,h4,h5,h6{font-size:100%;}
+body{color:#333;min-width: 1120px;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+a:hover em,a:hover i,a:hover span{cursor:pointer;}
+.cf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cf{*zoom:1;}
+
+/*** guide ***/
+.guide{width:60px;margin-left:570px;position:fixed;left:50%;bottom:134px;_position:absolute;_top:expression(documentElement.scrollTop+documentElement.clientHeight - this.clientHeight - 134+'px');display:block;}
+.guide a{display:block;width:60px;height:50px;background:url(images/sprite_v2.png) no-repeat;margin-top:10px;text-decoration:none;font:16px/50px "Microsoft YaHei";text-align:center;color:#fff;border-radius:2px;}
+.guide a span{display:none;text-align:center;}
+.guide a:hover{text-decoration:none;background-color:#39F;color:#fff;}
+.guide a:hover span{display:block;width:60px;background:#39F}
+.guide .find{background-position:-84px -236px;}
+.guide .report{background-position:-146px -236px;}
+.guide .edit{background-position:-83px -185px;}
+.guide .top{background-position:-145px -185px;}
+</style>
+
+</head>
+<body>
+
+<div style="height:1000px;"></div>
+
+<div class="guide">
+	<div class="guide-wrap">
+		<a href="#" class="edit" title="发新帖"><span>发新帖</span></a>
+		<a href="#" class="find" title="找论坛"><span>找论坛</span></a>
+		<a href="#" class="report" title="反馈"><span>反馈</span></a>
+		<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+	</div>
+</div>
+
+</body>
+</html>
+<!--代码整理：模板在线 www.htmldivcss.com-->
