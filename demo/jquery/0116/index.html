@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js" charset="gb2312"></script>
+<title>左右浮动导航及底部固定导航代码_模板在线网</title>
+<meta name="keywords" content="模板在线,悬浮漂浮,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为超过一定高度出现左右浮动导航及底部固定导航代码，属于站长常用代码，更多悬浮漂浮代码请访问模板在线网模板在线频道。" />
+<link href="css/lrtk.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 代码 开始 -->
+<div style=" width:990px;height:6000px; margin:0 auto;text-align:center;background: #EEE;"><br /><br /><br /><br /><br /><br />
+    <p>来源：<a href="http://www.yixun.com/" target="_blank">易讯网</a>　代码整理：<a href="http://www.htmldivcss.com/" target="_blank">模板在线网</a>　感谢：<a href="http://www.qisebing.com/" target="_blank">七色冰家族（SOHO叶子）</a></p>
+    <p>＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+    <p></p>
+    <p><p>超过一定高度出现左右浮动导航及底部固定导航代码，仿易迅网效果，有返回顶部按钮，兼容主流浏览器，模板在线网推荐下载！</p><p><br /></p><p>使用方法：</p><p>1、将index.html中的代码粘贴到要显示的页面</p><p>2、加载CSS、JS文件</p><p>3、修改图片为自己的图片</p><p>4、右侧导航的锚点跳转，请根据自己网页的实际情况修改</p></p>
+    <p style="margin:20px 0"></p>
+</div>
+
+    <div class="left_nav" id="left_nav">
+    	<a href="http://www.htmldivcss.com/" target="_blank" style="height:117px"></a>
+        <a href="http://www.htmldivcss.com/" target="_blank" style="height:116px"></a>
+        <a href="http://www.htmldivcss.com/" target="_blank" style="height:68px"></a>
+        <a href="http://www.htmldivcss.com/" target="_blank" style="height:68px"></a>
+        <a href="http://www.htmldivcss.com/" target="_blank" style="height:68px"></a>
+        <a href="http://www.htmldivcss.com/" target="_blank" style="height:68px"></a>
+    </div>
+    
+    <div class="float" id="float">	
+        <a href="#1" class="an_1">导航1</a>
+        <a href="#2" class="an_2">导航2</a>
+        <a href="#3" class="an_3">导航3</a>
+        <a href="#4" class="an_4">导航4</a>
+        <a href="#5" class="an_5">导航5</a>
+        <a href="#6" class="an_6">导航6</a>
+        <a href="#7" class="an_7">导航7</a>
+        <a href="#8" class="an_8">导航8</a>
+        <a href="#9" class="an_9">导航9</a>
+        <a href="#10" class="an_10">导航10</a>
+        <a href="#11" class="an_11">导航11</a>
+        <a href="#top" class="an_12">导航12</a>
+    </div>
+	
+    <div class="act_nav">
+        <div class="event_content">
+            <a href="http://www.htmldivcss.com/" target="_blank" title="返回主页" style="width:152px;">返回主页</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="手机" style="width:105px;">手机</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="数码" style="width:103px;">数码</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="电脑" style="width:118px;">电脑</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="家电" style="width:111px;">大家电</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="家电" style="width:107px;">小家电</a>
+            <a href="http://www.htmldivcss.com/" target="_blank" title="百货" style="width:103px;">百货</a>
+            <p style="padding-top:13px">
+            	<a href="http://www.htmldivcss.com/" target="_blank" title="旅游">旅游专场</a>
+                <a href="http://www.htmldivcss.com/" target="_blank" title="送礼">送礼专场</a>
+                <a href="http://www.htmldivcss.com/" target="_blank" title="会员">游戏专场</a>
+                <a href="http://www.htmldivcss.com/" target="_blank" title="新人">新人专场</a>
+                <a href="http://www.htmldivcss.com/" target="_blank" title="无线">无线专场</a>
+                <a href="http://www.htmldivcss.com/" target="_blank" title="会员">QQ会员</a>
+            </p>
+        </div>
+    </div>
+  
+</div>
+
+<script type="text/javascript">
+//浮动导航
+function float_nav(dom){
+	var right_nav=$(dom);
+	var nav_height=right_nav.height();
+	function right_nav_position(bool){
+		var window_height=$(window).height();
+		var nav_top=(window_height-nav_height)/2;
+		if(bool){
+			right_nav.stop(true,false).animate({top:nav_top+$(window).scrollTop()},400);
+		}else{
+			right_nav.stop(true,false).animate({top:nav_top},300);
+		}	
+		right_nav.show();
+	}
+	
+	if(!+'\v1' && !window.XMLHttpRequest ){
+		$(window).bind('scroll resize',function(){
+			if($(window).scrollTop()>300){
+				right_nav_position(true);			
+			}else{
+				right_nav.hide();	
+			}
+		})
+	}else{
+		$(window).bind('scroll resize',function(){
+			if($(window).scrollTop()>300){
+				right_nav_position();
+			}else{
+				right_nav.hide();
+			}
+		})
+	}	
+}
+float_nav('#float');
+float_nav('#left_nav');
+</script>
+<!-- 代码 结束 -->
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+</body>
+</html>

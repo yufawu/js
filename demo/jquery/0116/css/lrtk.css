@@ -1,0 +1,42 @@
+.act_nav{background:url(../images/bottom.png) no-repeat top center; height: 74px; position: fixed; left: 0; bottom: 0; z-index: 500; width: 100%;}
+.act_nav .event_content{height: 74px;width:985px; margin:0 auto; text-align:left; position:relative; }
+.act_nav .event_content a,.act_nav .event_content p{ display: block;height: 61px; float: left; text-indent: -9999px; outline: none; }
+.act_nav .event_content p {width:170px; margin-left:10px;}
+.act_nav .event_content p a{ width: 77px; height: 20px; margin-left:5px;}
+
+/*右侧悬浮导航*/
+.float{width:111px;height:504px;position:fixed;left:50%;_position:absolute;display:none;overflow:hidden;margin-left:515px; z-index:50}/*left50%确保页面中间，左边距515大于页面内容的一半，确保在内容整体右侧外*/
+.float a{display:block;text-indent:-9999px;overflow:hidden;height:42px; background:url(../images/right_nav.png) no-repeat;-webkit-transition:background 0.2s ease}
+.float .an_1:hover{background-position:-111px 0}
+.float .an_2{background-position:-222px 0}
+.float .an_2:hover{background-position:-333px 0}
+.float .an_3{background-position:-444px 0}
+.float .an_3:hover{background-position:-555px 0}
+.float .an_4{background-position:-666px 0}
+.float .an_4:hover{background-position:-777px 0}
+.float .an_5{background-position:-888px 0}
+.float .an_5:hover{background-position:-999px 0}
+.float .an_6{background-position:-1110px 0}
+.float .an_6:hover{background-position:-1221px 0}
+.float .an_7{background-position:-1332px 0}
+.float .an_7:hover{background-position:-1443px 0}
+.float .an_8{background-position:-1554px 0}
+.float .an_8:hover{background-position:-1665px 0}
+.float .an_9{background-position:-1776px 0}
+.float .an_9:hover{background-position:-1887px 0}
+.float .an_10{background-position:-1998px 0}
+.float .an_10:hover{background-position:-2109px 0}
+.float .an_11{background-position:-2442px 0}
+.float .an_11:hover{background-position:-2553px 0}
+.float .an_12{background-position:-2220px 0}
+.float .an_12:hover{background-position:-2331px 0}
+
+/*右侧悬浮*/
+.left_nav{width:109px; height:503px; position:fixed; left:50%; margin-left:-630px; z-index:1000; display:none; background:url(../images/left.png) no-repeat}
+.left_nav a{display:block}
+
+/*
+本代码由模板在线网收集并编辑整理;
+尊重他人劳动成果;
+转载请保留模板在线网链接 - http://www.htmldivcss.com
+*/
