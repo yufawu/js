@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>6款jquery鼠标悬停图文切换效果 - 模板在线网(www.htmldivcss.com)</title>
+<meta name="keywords" content="jquery特效、jquery鼠标悬停、图文切换" />
+<meta name="description" content="6款_jquery鼠标悬停图文切换效果_鼠标悬停图文切换代码" />
+<style>
+*{margin:0;padding:0;}
+#wrap{margin:10px auto;width:640px;overflow:hidden;}
+#wrap h1{margin:20px 0;text-align:center;color:#006393;}
+/* 1 */
+.item1 img{vertical-align:top;}
+.item1 li{position:relative;float:left;margin-right:3px;width:157px;height:203px;overflow:hidden;cursor:pointer;}
+.item1 div{position:absolute;left:0;top:120px;width:100%;height:50px;text-align:center;background:url(images/demo02.png) no-repeat;color:#FFF;overflow:hidden;}
+.item1 p{display:none;margin:5px auto 0;width:135px;line-height:20px;text-align:left;text-indent:2em;font-size:12px;}
+.item1 h3{margin:11px 0;height:25px;text-indent:-10000px;background:url(images/demo03.png) no-repeat 0 -8px;}
+
+
+/* 2 */
+.item2{position:relative;float:left;margin-right:3px;width:157px;height:203px;overflow:hidden;cursor:pointer;}
+.item2 .caption{position:absolute;left:0;display:none;width:157px;height:203px;color:#fff;font-weight:bold;background:url(images/demo02.png) no-repeat;}
+.item2 h3{margin:10px 0 5px;height:25px;text-indent:-10000px;background:url(images/demo03.png) no-repeat 0 -10px;}
+.item2 p{padding:0 12px;margin:0;line-height:20px;text-indent:2em;font-size:12px;color:#fff;font-weight:normal;}
+.item2 img{border:0;position:absolute;}
+.item2-txt{position:absolute;left:0;top:120px;width:100%;height:40px;text-align:center;color:#FFF;overflow:hidden;background:url(images/demo02.png) no-repeat;}
+
+
+/* 3 */
+.item3{position:relative;float:left;margin-right:3px;width:157px;height:203px;cursor:pointer;overflow:hidden;}
+.item3 h2{position:absolute;left:0;top:130px;height:40px;width:100%;background:url(images/demo02.png) no-repeat;}
+.item3 h2 p{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item3 div{position:absolute;width:0;height:0;background:url(images/demo02.png) repeat;overflow:hidden;_zoom:1;}
+.item3 .cornerTL{left:0;top:0;}
+.item3 .cornerTR{right:0;top:0;}
+.item3 .cornerBL{left:0;bottom:0;}
+.item3 .cornerBR{right:0;bottom:0;}
+.item3 dl{position:absolute;top:0;left:0;width:157px;height:203px;display:none;}
+.item3 dt{height:40px;width:100%;line-height:40px;text-align:center;color:#FFF;}
+.item3 dt h3{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item3 dd{padding:0 12px;width:133px;line-height:20px;text-indent:2em;color:#FFF;font-size:12px;}
+
+
+/* 4 */
+.item4{width:157px;height:203px;margin-right:3px;overflow:hidden;position:relative;float:left;cursor:pointer;}
+.item4 .caption{width:157px;height:203px;color:#fff;font-weight:bold;position:absolute;left:0;display:none;background:url(images/demo02.png) no-repeat;}
+.item4 h3{margin:10px 0 5px;height:25px;text-indent:-10000px;background-image:url(images/demo03.png);background-repeat:no-repeat;background-position:0 -8px;}
+.item4 p{padding:0 12px;margin:0;text-indent:2em;font-size:12px;line-height:20px;color:#fff;font-weight:normal;}
+.item4 img{border:0;position:absolute;}
+.item4-txt{position:absolute;left:0;top:120px;width:100%;height:50px;text-align:center;color:#FFF;overflow:hidden;background:url(images/demo02.png) no-repeat;}
+
+/* 5 */
+.item5{position:relative;float:left;margin-right:3px;width:157px;height:203px;cursor:pointer;overflow:hidden;}
+.item5 h2{position:absolute;left:0;top:130px;height:40px;width:100%;background:url(images/demo02.png) no-repeat;}
+.item5 h2 p{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item5 div{position:absolute;width:0;height:0;background:url(images/demo02.png) repeat;overflow:hidden;_zoom:1;}
+.item5 .cornerTL{left:0;top:0;}
+.item5 .cornerTR{right:0;top:0;}
+.item5 .cornerBL{left:0;bottom:0;}
+.item5 .cornerBR{right:0;bottom:0;}
+.item5 .cornerCC{left:78px;top:101px;}
+.item5 dl{position:absolute;top:0;left:0;width:157px;height:203px;display:none;}
+.item5 dt{height:40px;width:100%;line-height:40px;text-align:center;color:#FFF;}
+.item5 dt h3{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item5 dd{padding:0 12px;width:133px;line-height:20px;text-indent:2em;color:#FFF;font-size:12px;}
+
+/* 6 */
+.item6{position:relative;float:left;margin-right:3px;width:157px;height:203px;cursor:pointer;overflow:hidden;}
+.item6 h2{position:absolute;left:0;top:130px;height:40px;width:100%;background:url(images/demo02.png) no-repeat;}
+.item6 h2 p{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item6 div{position:absolute;width:0;height:0;background:url(images/demo02.png) repeat;overflow:hidden;_zoom:1;}
+.item6 .cornerCC{left:78px;top:101px;}
+.item6 dl{position:absolute;top:0;left:0;width:157px;height:203px;display:none;}
+.item6 dt{height:40px;width:100%;line-height:40px;text-align:center;color:#FFF;}
+.item6 dt h3{height:40px;text-indent:-10000px;background:url(images/demo03.png) no-repeat;}
+.item6 dd{padding:0 12px;width:133px;line-height:20px;text-indent:2em;color:#FFF;font-size:12px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+/* 1 */
+$(function(){
+		$(".item1 li").hover(
+			function(){
+				var that=this;	
+				item1Timer=setTimeout(function(){
+					$(that).find("div").animate({"top":0,"height":204},300,function(){
+						$(that).find("p").fadeIn(200);
+					});
+				},100);
+			},
+			function(){
+				var that=this;	
+				clearTimeout(item1Timer);
+				$(that).find("p").fadeOut(200);
+				$(that).find("div").animate({"top":120,"height":50},300);
+			}
+		)
+});
+	
+/* 2 */
+$(function(){
+	$(".item2").hover(
+		function(){
+			var that=this;
+			item2Timer=setTimeout(function(){
+				$(that).find('div.caption').slideDown(300);
+				$(that).find('.item2-txt').fadeOut(200);
+			},100);
+			
+		},
+		function(){
+			var that=this;
+			clearTimeout(item2Timer);
+			$(that).find('div.caption').slideUp(300);
+			$(that).find('.item2-txt').fadeIn(200);
+		}
+	);
+});
+
+/* 3 */
+$(function(){
+	$(".item3").hover(
+		function(){
+			var that=this;
+			item3Timer=setTimeout(function(){
+				$(that).find("div").animate({width:148,height:148},300,function(){
+					$(that).find("h2").fadeOut(200);
+					$(that).find("dl").fadeIn(200);
+				});
+			},100);
+			
+			},
+		function(){
+			var that=this;
+			clearTimeout(item3Timer);
+			$(that).find("dl").fadeOut(200);
+			$(that).find("div").stop().animate({width:0,height:0},300);
+			$(that).find("h2").fadeIn(200);
+			}
+		)
+});
+
+/* 4 */
+$(function(){
+	var move = -50;
+	var zoom = 1.5;
+	$(".item4").each(function(){
+		var that=this
+		$(that).bind({
+			mouseenter:function(){
+				item4Timer=setTimeout(function(){
+					width = $(that).width() * zoom;
+					height = $(that).height() * zoom;
+					$(that).find('img').animate({'width':width, 'height':height, 'top':move, 'left':move},500);
+					$(that).find('div.caption').fadeIn(500);
+					$(that).find('.item4-txt').fadeOut(500);
+				},200);
+			},
+			mouseleave:function(){
+				clearTimeout(item4Timer);
+				$(that).find('img').animate({'width':$(that).width(), 'height':$(that).height(), 'top':'0', 'left':'0'},500);	
+				$(that).find('div.caption').fadeOut(500);
+				$(that).find('.item4-txt').fadeIn(500);
+				}
+		});
+	})	
+});
+
+/* 5 */
+$(function(){
+	$(".item5").hover(
+		function(){
+			var that=this;
+			item5Timer=setTimeout(function(){
+				$(that).find("div").animate({width:157,height:203},300,function(){
+					$(that).find("h2").fadeOut(200);
+					$(that).find("dl").fadeIn(200);
+				});
+			},100);
+			
+			},
+		function(){
+			var that=this;
+			clearTimeout(item5Timer);
+			$(that).find("dl").fadeOut(200);
+			$(that).find("div").stop().animate({width:0,height:0},300);
+			$(that).find("h2").fadeIn(200);
+			}
+		)
+	
+});
+
+/* 6 */
+$(function(){
+	$(".item6").hover(
+		function(){
+			var that=this;
+			item6Timer=setTimeout(function(){
+				$(that).find("div").animate({width:157,height:203,left:0,top:0},300,function(){
+					$(that).find("h2").fadeOut(200);
+					$(that).find("dl").fadeIn(200);
+				});
+			},100);
+			
+			},
+		function(){
+			var that=this;
+			clearTimeout(item6Timer);
+			$(that).find("dl").fadeOut(200);
+			$(that).find("div").stop().animate({width:0,height:0,left:78,top:101},300);
+			$(that).find("h2").fadeIn(200);
+			}
+		)
+});
+</script>
+</head>
+
+<body>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+<!-- 第一个demo -->
+<div id="wrap">
+	<h1>DEMO 1</h1>
+	<ul class="item1">
+    	<li>
+			<img src="images/demo01.jpg" width="157" height="203" />
+			<div>
+            	<h3>自助下单</h3>
+	            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+            </div>
+		</li>
+        <li>
+			<img src="images/demo01.jpg" width="157" height="203" />
+			<div>
+            	<h3>自助下单</h3>
+	            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+            </div>
+		</li>
+        <li>
+			<img src="images/demo01.jpg" width="157" height="203" />
+			<div>
+            	<h3>自助下单</h3>
+	            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+            </div>
+		</li>
+        <li>
+			<img src="images/demo01.jpg" width="157" height="203" />
+			<div>
+            	<h3>自助下单</h3>
+	            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+            </div>
+		</li>
+    </ul>
+</div>
+<!-- 第二个demo -->
+<div id="wrap">
+	<h1>DEMO 2</h1>
+	<div class="item2">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item2-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item2">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item2-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item2">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item2-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item2">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item2-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+</div>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+<!-- 第三个demo -->
+<div id="wrap">
+	<h1>DEMO 3</h1>
+	<div class="item3">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTL"> </div>
+      	<div class="cornerTR"> </div>
+     	<div class="cornerBL"> </div>
+     	<div class="cornerBR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item3">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTL"> </div>
+      	<div class="cornerTR"> </div>
+     	<div class="cornerBL"> </div>
+     	<div class="cornerBR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item3">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTL"> </div>
+      	<div class="cornerTR"> </div>
+     	<div class="cornerBL"> </div>
+     	<div class="cornerBR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item3">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTL"> </div>
+      	<div class="cornerTR"> </div>
+     	<div class="cornerBL"> </div>
+     	<div class="cornerBR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+</div>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+<!-- 第四个demo -->
+<div id="wrap">
+	<h1>DEMO 4</h1>
+	<div class="item4">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item4-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item4">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item4-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item4">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item4-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+    <div class="item4">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <div class="item4-txt">
+        	<h3>菁英团队</h3>
+        </div>
+      	<div class="caption">
+            <h3>菁英团队</h3>
+            <p>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</p>
+      	</div>
+    </div>
+</div>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+<!-- 第五个demo -->
+<div id="wrap">
+	<h1>DEMO 5</h1>
+    <div class="item5">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTL"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item5">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerTR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item5">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerBL"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item5">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerBR"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>    
+</div>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+<!-- 第六个demo -->
+<div id="wrap">
+	<h1>DEMO 6</h1>
+    <div class="item6">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerCC"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item6">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerCC"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item6">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerCC"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+    <div class="item6">
+    	<img src="images/demo01.jpg" width="157" height="203" />
+        <h2><p>111</p></h2>
+        <div class="cornerCC"> </div>
+        <dl>
+        	<dt><h3>111</h3></dt>
+            <dd>自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单自助下单</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
