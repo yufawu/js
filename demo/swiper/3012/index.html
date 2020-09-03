@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>新特性</title>
+
+<!--swiper框架样式-->
+<link rel="stylesheet" type="text/css" href="statics/css/swiper-3.4.2.min.css" />
+
+<!--主要样式-->
+<link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+
+<!--插件-->
+<script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="statics/js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+<!--
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ * 图片不能商用，代码可商用。
+ 
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+-->
+
+<div class="product-section product-features">
+	<div class="product-title">新特性</div>
+	<div class="product-wrapper">
+		<div class="product-body swiper-container">
+			<ul class="features-slide swiper-wrapper">
+				<li class="features-item swiper-slide">
+					<h3>2017-01-30</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s"> 支持通过VPC与弹性云服务器进行混合组网 </p>
+
+					</a>
+				</li>
+
+				<li class="features-item swiper-slide">
+					<h3>2017-03-30</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s"> 支持云硬盘在线挂载、卸载，弹性扩容 </p>
+
+					</a>
+				</li>
+
+				<li class="features-item swiper-slide">
+					<h3>2017-07-30</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s"> 支持裸金属服务器自动化发放 </p>
+
+					</a>
+				</li>
+
+				<li class="features-item swiper-slide">
+					<h3>2017-11-30</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s"> 支持私有镜像，支撑企业业务部署 </p>
+
+					</a>
+				</li>
+
+				<li class="features-item swiper-slide">
+					<h3>2018-08-30</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s">支持VMware和XenServer等第三方虚拟化</p>
+
+					</a>
+				</li>
+
+				<li class="features-item swiper-slide dark">
+					<h3>即将上线</h3>
+					<i></i>
+					<a class="features-info">
+						<p class="features-info-i"></p>
+						<p class="features-info-s"> 本地硬盘自定义RAID等功能 </p>
+
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next swiper-button-disabled"></div>
+	</div>
+</div>
+
+<!---调用方法-->
+<script type="text/javascript">
+$(function() {
+	var mySwiper = new Swiper(".swiper-container", {
+		slidesPerView: 4, //默认是显示4个
+		initialSlide: 999, //默认从第几个显示，999是为了让右边没有
+		spaceBetween: 0, //间距
+		speed: 1000,//速度
+		prevButton: ".swiper-button-prev", //左右按钮
+		nextButton: ".swiper-button-next"
+	})
+})
+</script>
+
+</body>
+</html>
