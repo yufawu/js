@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<meta charset="utf-8">
+		<title>Animejs demon</title>
+		<script src="js/anime.min.js"></script>
+		<!-- www.animejs.cn-->
+		<style>
+		    body{
+				margin:0;
+			}
+			.wrapper {
+				width: 700px;
+				height: 100px;
+				position: relative;
+				margin: 40px auto 0;
+				background: #ccc;
+				overflow: hidden;
+			}
+			.box {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: red;
+				font-size: 25px;
+				line-height: 100px;
+				text-align: center;
+			}
+			.box:nth-child(odd) {
+				background: #f8f8f8;
+			}
+			.box:nth-child(even) {
+				background: #eee;
+			}
+			.boxes {
+				position: relative;
+				left: -100px;
+			}
+		</style>
+		</head>
+		<body>
+          <div class="wrapper">
+            <div class="boxes">
+              <div class="box">1</div>
+              <div class="box">2</div>
+              <div class="box">3</div>
+              <div class="box">4</div>
+              <div class="box">5</div>
+              <div class="box">6</div>
+              <div class="box">7</div>
+              <div class="box">8</div>
+            </div>
+          </div>
+  <script>
+	xTrans =  [];
+	anime.set('.box',{
+	  translateX: function(el, i, l) {
+		  xTrans[i]={x : i * 100};
+		  return i * 100;
+	  },
+	});
+	
+	anime({
+		targets: xTrans,
+		duration: 6000, //走一周持续时间
+		easing: 'linear',
+		x: "+=800",
+		loop: true,
+		update: function(anim) {
+				anime.set('.box', {
+				  translateX:function(el, i, l){
+						  return xTrans[i].x%800
+					  }
+				});
+		}
+	})
+  </script>
+</body>
+</html>
