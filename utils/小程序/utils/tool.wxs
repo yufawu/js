@@ -1,0 +1,27 @@
+// 支持es4语法
+var filter = {
+	numberToFixed: function(value){
+		return value.toFixed(2)
+    },
+    processStr:function(str){ //字符大于3的,后面显示星号
+        if(str){
+            var len = str.length;
+            // console.log(str,len,'str')
+            if(len <4){
+                return str;
+            }else{
+                return str.slice(0,1)+'**'+str.slice(-1)
+            }
+        } 
+    },
+    timeStr:function(str){ //时间格式，显示到年月日
+       return str.slice(0,11)
+    }
+}
+
+// 导出对外暴露的属性
+module.exports = {
+    numberToFixed: filter.numberToFixed,
+    processStr: filter.processStr,
+    timeStr:filter.timeStr
+}
