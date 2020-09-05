@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>鼠标悬停九宫格图片高亮显示代码_模板在线网</title>
+<meta name="keywords" content="鼠标悬停九宫格图片高亮显示代码" />
+<meta name="description" content="jquery hover事件鼠标悬停九宫格图片高亮显示代码。" />
+<link href="css/style.css" media="screen" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+
+	var spotlight = {
+		opacity : 0.2,
+		imgWidth : $('.spotlightWrapper ul li').find('img').width(), 
+		imgHeight : $('.spotlightWrapper ul li').find('img').height() 
+	
+	};
+
+	$('.spotlightWrapper ul li').css({ 'width' : spotlight.imgWidth, 'height' : spotlight.imgHeight });
+
+	$('.spotlightWrapper ul li').hover(function(){
+		$(this).find('img').addClass('active').css({ 'opacity' : 1});
+		$(this).siblings('li').find('img').css({'opacity' : spotlight.opacity}) ;
+	}, function(){
+		$(this).find('img').removeClass('active');
+	});
+
+	$('.spotlightWrapper ul').bind('mouseleave',function(){
+		$(this).find('img').css('opacity', 1);
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+<div class='spotlightWrapper'>
+	<ul>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/1.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/2.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/3.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/4.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/5.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/6.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/7.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/9.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/10.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/11.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/12.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/13.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/14.png' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/15.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/16.jpg' /></a></li>
+		<li><a href="http://www.htmldivcss.com/"><img src='images/5.jpg' /></a></li>
+	</ul>
+</div>
+<!-- 本代码由模板在线网（http://www.htmldivcss.com）收集并编辑整理 -->
+</body>
+</html>

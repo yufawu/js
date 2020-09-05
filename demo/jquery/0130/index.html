@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,相册代码,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为纵向的JS相册效果，属于站长常用代码，更多相册代码代码请访问模板在线JS代码频道。" />
+<title>纵向的JS相册效果_模板在线</title>
+<style>
+body {background:#000000;margin:20px 0;font:12px Verdana, Arial, Tahoma;text-align:center;vertical-align:middle;color:#FFFFFF}
+img {border:none}
+.txt_1 {font:bold 24px Verdana, Tahoma;color:#fff}
+img.thumb_img {cursor:pointer;display:block;margin-bottom:10px}
+img#main_img {cursor:pointer;display:block;}
+#gotop {cursor:pointer;display:block;}
+#gobottom {cursor:pointer;display:block;}
+#showArea {height:355px;margin:10px;overflow:hidden}
+.info {color:#666;font:normal 9px Verdana;margin-top:20px}
+.info a:link, .info a:visited {color:#666;text-decoration:none}
+.info a:hover {color:#fff;text-decoration:none}
+</style>
+</head>
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="5">
+  <tr>
+    <td height="75" colspan="2" align="left" class="txt_1">纵向的JS相册效果</td>
+  </tr>
+  <tr>
+    <td width="640" align="center"><img src="images/03.jpg" alt="模板在线" width="640" height="400" border="0" id="main_img" rel="images/03.jpg" link="http://www.htmldivcss.com" /></td>
+    <td width="110" align="center" valign="top">
+    <img src="images/gotop.gif" width="100" height="14" id="gotop" />
+    <div id="showArea">
+        <img src="images/01.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/01.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/02.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/02.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/03.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/03.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/01.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/01.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/02.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/02.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/02.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/03.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/01.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/01.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/02.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/02.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/03.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/03.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/01.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/01.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/02.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/02.jpg" link="http://www.htmldivcss.com" />
+        <img src="images/03.jpg" alt="模板在线" width="80" height="50" border="0" class="thumb_img" rel="images/03.jpg" link="http://www.htmldivcss.com" />
+    </div>
+    <img src="images/gobottom.gif" width="100" height="14" id="gobottom" /></td>
+  </tr>
+</table>
+<br />
+<table width="900" height="176" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="176" style="
+	color:#FFFFFF"><p align="center">代码整理：<a href="http://www.htmldivcss.com/" target="_blank">模板在线</a>　</p>
+      <p align="center">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+      <p align="center"></p>
+      <p align="center"><p>纵向的JS相册效果。</p></p>
+      <p align="center"></p>
+      <p align="center">&nbsp;</p>
+        <p align="center"></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+function $(e) {return document.getElementById(e);}
+document.getElementsByClassName = function(cl) {
+    var retnode = [];
+    var myclass = new RegExp('\\b'+cl+'\\b');
+    var elem = this.getElementsByTagName('*');
+    for (var i = 0; i < elem.length; i++) {
+        var classes = elem[i].className;
+        if (myclass.test(classes)) retnode.push(elem[i]);
+    }
+    return retnode;
+}
+var MyMar;
+var speed = 1; //速度，越大越慢
+var spec = 1; //每次滚动的间距, 越大滚动越快
+var ipath = 'images/'; //图片路径
+var thumbs = document.getElementsByClassName('thumb_img');
+for (var i=0; i<thumbs.length; i++) {
+    thumbs[i].onmouseover = function () {$('main_img').src=this.rel; $('main_img').link=this.link;};
+    thumbs[i].onclick = function () {location = this.link}
+}
+$('main_img').onclick = function () {location = this.link;}
+$('gotop').onmouseover = function() {this.src = ipath + 'gotop2.gif'; MyMar=setInterval(gotop,speed);}
+$('gotop').onmouseout = function() {this.src = ipath + 'gotop.gif'; clearInterval(MyMar);}
+$('gobottom').onmouseover = function() {this.src = ipath + 'gobottom2.gif'; MyMar=setInterval(gobottom,speed);}
+$('gobottom').onmouseout = function() {this.src = ipath + 'gobottom.gif'; clearInterval(MyMar);}
+function gotop() {$('showArea').scrollTop-=spec;}
+function gobottom() {$('showArea').scrollTop+=spec;}
+</script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>页面切换</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <style>
+        .iframe {
+            width: 1300px;
+            height: 1000px;
+        }
+        
+        .iframe iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .page p {
+            width: 100px;
+            height: 30px;
+            background: blue;
+            color: #fff;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <body>
+        <div class="page">
+            <p id="next">下一页</p>
+        </div>
+        <div class="iframe">
+            <iframe id="psrc" src='./0001/index.html' frameborder="0"></iframe>
+        </div>
+
+    </body>
+    <script>
+        window.onload = function() {
+            console.log(111)
+            var i = 1
+
+            var  aDiv = document.getElementById('next');
+            var  aframe = document.getElementById('psrc');
+            aDiv.onclick = function() {
+                i++
+                var src
+                if (i > 99) {
+                    src = './0' + i + '/index.html'
+                } else if (i > 9) {
+                    src = './00' + i + '/index.html'
+                } else {
+                    src = './000' + i + '/index.html'
+                }
+
+                console.log(src, 'src')
+                aframe.src = src
+
+            }
+
+        }
+    </script>
+
+</html>
